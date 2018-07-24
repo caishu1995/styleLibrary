@@ -1,0 +1,105 @@
+.h-content-buttons{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+.h-content-buttons button{
+	background: none;
+	border: 1px solid #ffffff;
+	overflow: hidden;
+	float: left;
+	padding: 0;
+}
+@media (max-width: 699px) {
+	.h-content-buttons button {
+		height: 40px;
+		width: 35px;
+	}
+}
+@media (min-width: 700px) {
+	.h-content-buttons button {
+		height: 5rem;
+		width: 7rem;
+	}
+}
+.h-content-buttons button:nth-child(1) span:nth-child(1)::after{
+	background-color: #FFF;
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+	-webkit-transform: translateX(-50%) scaleX(0);
+	-ms-transform: translateX(-50%) scaleX(0);
+	transform: translateX(-50%) scaleX(0);
+	
+	-webkit-transform-origin: center right;
+	-ms-transform-origin: center right;
+	transform-origin: center right;
+	
+	-webkit-transition: 2s ease;
+	-ms-transition: 2s ease;
+	transition: 2s ease;
+}
+.h-content-buttons button:nth-child(1):hover span:nth-child(1)::after{
+	-webkit-transform: translateX(-50%) scaleX(.5);
+	-ms-transform: translateX(-50%) scaleX(.5);
+	transform: translateX(-50%) scaleX(.5);
+}
+.h-content-buttons button:nth-child(1) span:nth-child(2){
+	color: white;
+	position: absolute;
+	font-size: 1rem;
+	text-align: center;
+	padding: auto auto;
+	top: 40%;
+	left: 0;
+	right: 50%;
+}
+.h-content-buttons button:nth-child(2) span:nth-child(1)::before{
+	background-color: #FFF;
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+	-webkit-transform: translateX(50%) scaleX(0);
+	-ms-transform: translateX(50%) scaleX(0);
+	transform: translateX(50%) scaleX(0);
+	
+	-webkit-transform-origin: center left;
+	-ms-transform-origin: center left;
+	transform-origin: center left;
+	
+	-webkit-transition: 2s ease;
+	-ms-transition: 2s ease;
+	transition: 2s ease;
+}
+.h-content-buttons button:nth-child(2) span:nth-child(2){
+	color: white;
+	position: absolute;
+	font-size: 1rem;
+	text-align: center;
+	padding: auto auto;
+	top: 40%;
+	left: 50%;
+	right: 0%;
+}
+.h-content-buttons button:hover span:nth-child(1)::before{
+	-webkit-transform: translateX(50%) scaleX(.5);
+	-ms-transform: translateX(50%) scaleX(.5);
+	transform: translateX(50%) scaleX(.5);
+}
+.h-content-buttons button span svg{
+	fill: white;
+	height: 1.1875rem;
+	width: 1.1875rem;
+	z-index: 5;
+}
+.h-content-buttons button:hover span svg{
+	fill: black;
+}

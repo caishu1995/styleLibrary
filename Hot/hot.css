@@ -1,0 +1,78 @@
+.h_hot img{
+	height: 40px;
+	width: 70px;
+	
+	animation:imgMove 1s infinite;
+	-moz-animation:imgMove 1s infinite; /* Firefox */
+	-webkit-animation:imgMove 1s infinite; /* Safari and Chrome */
+	-o-animation:imgMove 5s infinite; /* Opera */
+}
+.h_hot p{
+	left: 20px;
+	margin: 0;
+	position: absolute;
+	top: 7px;
+	
+	animation:pMove 1s infinite;
+	-moz-animation:pMove 1s infinite; /* Firefox */
+	-webkit-animation:pMove 1s infinite; /* Safari and Chrome */
+	-o-animation:pMove 5s infinite; /* Opera */
+}
+
+@keyframes imgMove{
+	0%   { transform: scale(1);   }
+	25%  { transform: scale(1.1); }
+	50%  { transform: scale(1);   }
+	75%  { transform: scale(1.1); }
+	100% { transform: scale(1);   }
+}
+@-moz-keyframes imgMove /* Firefox */{
+	0%   { transform: scale(1);   }
+	25%  { transform: scale(1.1); }
+	50%  { transform: scale(1);   }
+	75%  { transform: scale(1.1); }
+	100% { transform: scale(1);   }
+}
+@-webkit-keyframes imgMove /* Safari and Chrome */{
+	0%   { transform: scale(1);   }
+	25%  { transform: scale(1.1); }
+	50%  { transform: scale(1);   }
+	75%  { transform: scale(1.1); }
+	100% { transform: scale(1);   }
+}
+@-o-keyframes imgMove /* Opera */{
+	0%   { transform: scale(1);   }
+	25%  { transform: scale(1.1); }
+	50%  { transform: scale(1);   }
+	75%  { transform: scale(1.1); }
+	100% { transform: scale(1);   }
+}
+
+@keyframes pMove{
+	0%   { color: yellow; transform: scale(1);  }
+	25%  { color: white; transform: scale(1.1); }
+	50%  { color: yellow; transform: scale(1);  }
+	75%  { color: white; transform: scale(1.1); }
+	100% { color: yellow; transform: scale(1);  }
+}
+@-moz-keyframes pMove /* Firefox */{
+	0%   { color: yellow; transform: scale(1);  }
+	25%  { color: white; transform: scale(1.1); }
+	50%  { color: yellow; transform: scale(1);  }
+	75%  { color: white; transform: scale(1.1); }
+	100% { color: yellow; transform: scale(1);  }
+}
+@-webkit-keyframes pMove /* Safari and Chrome */{
+	0%   { color: yellow; transform: scale(1);  }
+	25%  { color: white; transform: scale(1.1); }
+	50%  { color: yellow; transform: scale(1);  }
+	75%  { color: white; transform: scale(1.1); }
+	100% { color: yellow; transform: scale(1);  }
+}
+@-o-keyframes pMove /* Opera */{
+	0%   { color: yellow; transform: scale(1);  }
+	25%  { color: white; transform: scale(1.1); }
+	50%  { color: yellow; transform: scale(1);  }
+	75%  { color: white; transform: scale(1.1); }
+	100% { color: yellow; transform: scale(1);  }
+}

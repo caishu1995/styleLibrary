@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>组件-hot</title>
+	<style>
+        div{
+            border: 1px solid green;
+            color: white;
+            height: 40px;
+            position: relative;
+            width: 70px;
+        }
+	</style>
+    <link rel="stylesheet" href="hot.css">
+</head>
+<body>
+	<div id="div1"></div>
+
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="hot.js"></script>
+    <script>
+        var hotObj = new Hot("div1");
+        hotObj.init();
+    </script>
+</body>
+</html>

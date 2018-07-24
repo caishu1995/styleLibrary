@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聊天室</title>
+
+    <link rel="stylesheet" href="chartRoom.css">
+</head>
+<body style="height: 600px; width: 600px;">
+    <div class="chartRoom">
+        <div class="headPart notLoggedIn">
+            <label>请先登录</label>
+            <button class="logOutButton" onclick="logOutOnClickFunction(this)">登出</button>
+            <button class="logInButton" onclick="logInOnClickFunction(this)">登入</button>
+            <input class="userName" />
+        </div>
+        <div class="leftPart">
+            <div class="baseMenu">
+                <div class="partHeader">
+                    <label class="titleLabel">联系人列表</label>
+                </div>
+            </div>
+            <div class="detailMenu">
+                <div class="partHeader">
+                    <label class="titleLabel">成员列表</label>
+                </div>
+            </div>
+        </div>
+        <div class="rightPart">
+            <div class="partHeader"></div>
+            <div class="contentPart"></div>
+            <div class="footPart">
+                <textarea></textarea>
+                <button onclick="sendOnClickFunction(this)">发送(S)</button>
+            </div>
+        </div>
+
+
+        <script src="chartRoom.js"></script>
+    </div>
+</body>
+</html>

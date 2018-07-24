@@ -1,0 +1,146 @@
+.calendarShow{
+	float: left;
+	height: calc(100% - 4px);
+	margin: 0px;
+	width: calc(100% - 4px);
+}
+	.calendarShow .calendarLeftShow{
+		float: left;
+		height: 100%;
+		width: 64%;
+	}
+		.calendarShow .calendarLeftShow .calendarLeftHeader{
+			float: left;
+			height: 30px;
+		}
+			.calendarShow .calendarLeftShow .calendarLeftHeader .calendarLeftSelect{
+				border: 1px solid #c5c5c5;
+				float: left;
+				height: calc(100% - 8px);
+				margin: 3px 10px;
+				width: 101px;
+			}
+			.calendarShow .calendarLeftShow .calendarLeftHeader .calendarLeftSelect .prevYear,
+			.calendarShow .calendarLeftShow .calendarLeftHeader .calendarLeftSelect .nextYear,
+			.calendarShow .calendarLeftShow .calendarLeftHeader .calendarLeftSelect .prevMonth,
+			.calendarShow .calendarLeftShow .calendarLeftHeader .calendarLeftSelect .nextMonth{
+				background-color: #efefef;
+				color: #545454;
+				display: block;
+				float: left;
+				font-size: 16px;
+				padding: 0.5px 1px;
+				width: 15px;
+			}
+			.calendarShow .calendarLeftShow .calendarLeftHeader .calendarLeftSelect .thisYear,
+			.calendarShow .calendarLeftShow .calendarLeftHeader .calendarLeftSelect .thisMonth{
+				border-bottom: 0;
+				border-left: 1px solid #c5c5c5;
+				border-top: 0;
+				color: #545454;
+				float: left;
+				font-size: 12px;
+				line-height: 22px;
+				padding: 0 13px;
+				width: 67px;
+				/*去除下拉框下拉数据*/
+				appearance:none;
+				-moz-appearance:none;
+				-webkit-appearance:none;
+			}
+			.calendarShow .calendarLeftShow .calendarLeftHeader .calendarLeftSelect .thisMonth::-ms-expand { display: none; }
+			.calendarShow .calendarLeftShow .calendarLeftHeader .calendarLeftSelect .thisMonth option{
+				padding: 0 13px;
+				text-align: right;
+				width: 39px;
+			}
+		.calendarShow .calendarLeftShow .calendarLeftContent{
+			float: left;
+			width: 100%;
+		}
+			.calendarShow .calendarLeftShow .calendarLeftContent ul{
+				border-bottom: 1px solid #c5c5c5;
+				float: left;
+				height: 31px;
+				list-style: none;
+				margin: 0 0 0 10px;
+				padding: 0;
+			}
+			.calendarShow .calendarLeftShow .calendarLeftContent li{
+				border: 3px solid white;
+				float: left;
+				font-size: 14px;
+				height: 17px;
+				padding: 4px 2px;
+				text-align: center;
+				width: 18px;
+			}
+			.calendarShow .calendarLeftShow .calendarLeftContent .dateUl li{
+				font-weight: 600;
+			}
+			.calendarShow .calendarLeftShow .calendarLeftContent .titleUl li:first-child{
+				border: 1px solid white;
+				border-bottom-width: 2px;
+				font-weight: 500;
+				height: 21px;
+			}
+			.calendarShow .calendarLeftShow .calendarLeftContent .dateUl .week{
+				border: 1px solid white;
+				border-bottom-width: 2px;
+				border-right: 1px solid #c5c5c5;
+				font-weight: 500;
+				height: 21px;
+			}
+			.calendarShow .calendarLeftShow .calendarLeftContent .dateUl .hasDate:hover,
+			.calendarShow .calendarLeftShow .calendarLeftContent .dateUl .selectedDate{
+				border-color: rgb(255, 187, 0);
+			}
+			.calendarShow .calendarLeftShow .calendarLeftContent .thisDay{
+				background-color: rgb(255, 187, 0);
+				border-color: rgb(255, 187, 0);
+				color: white !important;
+			}
+			.calendarShow .calendarLeftShow .calendarLeftContent .sat,
+			.calendarShow .calendarLeftShow .calendarLeftContent .sun{
+				color: #e02d2d;
+			}
+	.calendarShow .calendarRightShow{
+		float: left;
+		height: calc(100% - 16px);
+		padding: 8px 5px;
+		width: calc(36% - 10px);
+	}
+		.calendarShow .calendarRightShow .calendarRightRow{
+			color: white;
+			font-size: 13px;
+			height: 20px;
+			text-align: center;
+			width: 100%;
+		}
+		.calendarShow .calendarRightShow .calendarRightDayRow{
+			height: 50px;
+			width: 100%;
+		}
+		.calendarShow .calendarRightShow .calendarRightDayRow .calendarRightDayShow{
+			background-color: rgb(255, 187, 0);
+			border-radius: 5px;
+			color: white;
+			font-size: 40px;
+			height: 100%;
+			margin: 0 auto;
+			text-align: center;
+			width: 50px;
+		}
+		
+.normalDay{
+	border: 2px solid rgb(99, 177, 255);
+}
+	.normalDay .calendarLeftShow hr{
+		border-top: 1px solid rgb(99, 177, 255);
+		height: 0;
+		margin: 0 10px;
+		width: calc(100% - 20px);
+	}
+	.normalDay .calendarRightShow{
+		background-color: rgb(99, 177, 255);
+	}

@@ -1,0 +1,55 @@
+.multipartInput{
+	float: left;
+}
+	.multipartInput > label{
+		display: inline-block;
+		float: left;
+		font-size: 20px;
+		height: 20px;
+		margin: 0 3px;
+		width: 3px;
+	}
+	.multipartInput .input{
+		border-bottom: 1px solid #c5c5c5;
+		font-size: 15px;
+		padding: 0 3px;
+		width: 26px;
+	}
+	.multipartInput .selectedInput {
+		border-bottom: 1px solid #C5C5C5;
+		background-color: yellow;
+	}
+	
+/* 下拉框 */
+.selectPart{
+	border: 1px solid #c5c5c5;
+	font-size: 14px;
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	top: 24px;
+	width: 120px;
+}
+	.selectPart li{
+		height: 20px;
+		width: 100%;
+	}
+		.selectPart li:hover{
+			background-color: #c6c6c6;
+			color: white;
+		}
+		.selectPart li:first-child{
+			background-color: #4b4b4b;
+			color: white;
+		}
+		.selectPart label:nth-child(1){
+			float: left;
+		}
+		.selectPart label:nth-child(2){
+			float: right;
+		}
+	.selectPart .selectedUl{
+		background-color: yellow;
+	}

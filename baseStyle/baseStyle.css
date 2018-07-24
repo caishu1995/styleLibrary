@@ -1,0 +1,38 @@
+*{ color: #337ab7; font-family: "Microsoft YaHei",'微软雅黑','Simsun',Verdana,Arial,Helvetica,sans-serif; font-size: 14px;}
+
+/* input 样式*/
+/* <input type="text" placeholder="aa" readOnly> */
+input[type="text"]{ border: 0; border-bottom: 1px solid #337AB7; color: #337ab7; float: left; outline: white; padding: 3px 5px;}
+input[type="text"]:-ms-input-placeholder{color: #c5c5c5;}
+input[type="text"]::-webkit-input-placeholder{color: #c5c5c5;}
+	input[type="text"]:read-only { background-color: buttonface; color: white; }
+	input[type="text"]:read-only:-ms-input-placeholder{color: white;}
+	input[type="text"]:read-only::-webkit-input-placeholder{color: white;}
+
+/* select 样式*/
+/* <select disabled><option>aaa</option></select> */
+select{ border: 1px solid #337AB7; border-radius: 3px; color: #337ab7; cursor: pointer; float: left; padding: 1px 3px;}
+select:disabled { background-color: buttonface; color: white; }
+
+/* button 样式*/
+/* <input type="button" value="aa" disabled> */
+input[type="button"]{ background-color: rgb(34, 131, 197); border: 1px solid #337AB7; border-radius: 3px; color: white; cursor: pointer;  float: left; outline: white; padding: 3px 15px;}
+input[type="button"]:-ms-input-placeholder{color: #c5c5c5;}
+input[type="button"]::-webkit-input-placeholder{color: #c5c5c5;}
+	input[type="button"]:disabled { background-color: buttonface; border-color: ButtonFace; color: white; }
+	input[type="button"]:disabled:-ms-input-placeholder{color: white;}
+	input[type="button"]:disabled::-webkit-input-placeholder{color: white;}
+	
+	input[type="button"]:hover{ background-color: #555555; border-color: #555555;}
+	input[type="button"]:hover:disabled{ background-color: buttonface; border-color: buttonface;}
+
+
+/* a 样式*/
+/* <a>aaaa</a> */
+a{ color: #337ab7; cursor: Default; float: left; padding: 1px 3px; text-decoration: none;}
+a:focus, a:hover { font-weight: 600; }
+
+
+/* 部分标题 样式*/
+/* <label class="partTitle">aaaaa</label> */
+.partTitle{ background-color: #7AA1C2; color: white; float: left; font-size: 16px; padding: 7px 20px;}

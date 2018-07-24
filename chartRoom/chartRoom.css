@@ -1,0 +1,210 @@
+.chartRoom{
+	border: 1px solid #c5c5c5;
+	height: 100%;
+	width: 100%;
+}
+	.chartRoom .headPart{
+		height: 24px;
+		padding: 3px 10px;
+		width: calc(100% - 20px);
+	}
+		.chartRoom .headPart label{
+			float: left;
+			height: 23px;
+			overflow: hidden;
+		}
+		.chartRoom .headPart input{
+			border:2px solid #c5c5c5;
+			border-radius: 3px;
+			color: #9ba077;
+			float: right;
+			height: 19px;
+			outline-color: #76a075;
+			opacity: 0;
+			overflow: hidden;
+			width: 0;
+		}
+		.chartRoom .headPart button{
+			background-color: #76a075;
+			border: 1px solid #76a075;
+			border-radius: 3px;
+			color: white;
+			height: 23px;
+			margin: 0 0 0 5px;
+			padding: 2px 3px;
+		}
+		.chartRoom .headPart .logInButton{
+			float: right;
+			opacity: 0;
+			overflow: hidden;
+			width: 0;
+		}
+		.chartRoom .headPart .logOutButton{
+			background-color: #a07c70;
+			border: 1px solid #a07c70;
+			float: left;
+			opacity: 0;
+			overflow: hidden;
+			width: 0;
+		}
+		
+		/* 未登录 */
+		.chartRoom .notLoggedIn:hover input,.chartRoom .notLoggedIn:hover .logInButton{
+			-webkit-transition-duration: 1s;
+			transition-duration: 1s;
+			opacity: 1;
+			padding: 0 5px;
+			width: initial;
+		}
+		.chartRoom .notLoggedIn:hover input{
+			width: 70px;
+		}
+		/* 已登入 */
+		.chartRoom .logIn:hover .logOutButton{
+			-webkit-transition-duration: 2s;
+			transition-duration: 2s;
+			opacity: 1;
+			padding: 0 5px;
+			width: initial;
+		}
+
+	.chartRoom .leftPart{
+		border-right: 1px dotted #8a8ea0;
+		float: left;
+		height: calc(100% - 30px);
+		max-width: 200px;
+		width: calc(30% - 1px);
+	}
+		.chartRoom .leftPart ul{
+			float: left;
+			height: calc(100% - 27px);
+			list-style: none;
+			margin: 0;
+			overflow: auto;
+			padding: 0 3px;
+			width: calc(100% - 6px);
+		}
+			.chartRoom .leftPart ul li{
+				font-size: 14px;
+				padding: 3px 7px;
+			}
+		.chartRoom .leftPart .baseMenu{
+			background-color: #cfdcea;
+			height: 50%;
+			width: 100%;
+		}
+			.chartRoom .leftPart .baseMenu .selectGroup{
+				background-color: #e9eff5;
+				border: 1px solid  #e9eff5;
+				border-radius: 5px;
+			}
+		.chartRoom .leftPart .detailMenu{
+			background-color: #f5f5f5;
+			height: 50%;
+			width: 100%;
+		}
+			.chartRoom .leftPart .detailMenu .partHeader{
+				background-color: #d9d8d8;
+			}
+			.chartRoom .leftPart .detailMenu .selectGroup{
+				background-color: #e9eff5;
+				border: 1px solid  #e9eff5;
+				border-radius: 5px;
+			}
+			
+	.chartRoom .rightPart{
+		float: left;
+		height: calc(100% - 30px);
+		width: 70%;
+	}
+		.chartRoom .rightPart .partHeader{
+			float: left;
+			height: 37px;
+		}
+		.chartRoom .rightPart .contentPart{
+			float: left;
+			height: calc(100% - 113px);
+			overflow-y: auto;
+			width: 100%;
+		}
+			.chartRoom .rightPart .contentPart .stateRow{
+				float: left;
+				text-align: center;
+				width: 100%;
+			}
+				.chartRoom .rightPart .contentPart .stateRow label{
+					background-color: #c7c7c7;
+					border: 1px solid #c7c7c7;
+					border-radius: 5px;
+					color: white;
+					font-size: 12px;
+					font-weight: 500;
+					padding: 0 10px;
+				}
+			.chartRoom .rightPart .contentPart .sayRow{
+				float: left;
+				padding: 1px 0;
+				width: 100%;
+			}
+				.chartRoom .rightPart .contentPart .sayRow .informationLabel{
+					color: #3838fd;
+					display:inline-block;
+					font-size: 14px;
+					width: 100%;
+				}
+				.chartRoom .rightPart .contentPart .sayRow .contentLabel{
+					float: left;
+					font-size: 16px;
+					margin: 0 10px;
+					width: calc(100% - 20px);
+					word-wrap: break-word;
+					word-break: normal;
+				}
+			.chartRoom .rightPart .contentPart .mySay .informationLabel{
+				color: #008040;
+			}
+		.chartRoom .rightPart .footPart{
+			border-top: 1px solid #c5c5c5;
+			float: left;
+			height: 69px;
+			width: 100%;
+		}
+			.chartRoom .rightPart .footPart textarea{
+				border: 0;
+				float: left;
+				height: 31px;
+				outline: none;
+				padding: 3px 5px;
+				resize: none;
+				width: calc(100% - 10px);
+			}
+			.chartRoom .rightPart .footPart button{
+				background-color: #d0ddeb;
+				border: 1px solid #d0ddeb;
+				border-radius: 5px;
+				float: right;
+				font-size: 12px;
+				height: 26px;
+				margin: 3px 5px;
+				padding: 3px 5px;
+				width: 70px;
+			}
+			
+	.chartRoom .partHeader{
+		border: 1px solid #e5e5e5;
+		background-color: #ecf3f8;
+		color: #494949;
+		float: left;
+		height: 21px;
+		padding: 2px 0 2px 3px;
+		width: calc(100% - 5px);
+	}
+		.chartRoom .partHeader .titleLabel{
+			font-size: 16px;
+			font-weight: 600;
+		}
+		.chartRoom .partHeader .detailLabel{
+			float: left;
+			font-size: 12px;
+			width: 100%;
+		}

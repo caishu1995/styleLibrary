@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件-日历</title>
+    <link rel="stylesheet" href="CalendarStyle.css">
+</head>
+<body>
+    <div id="calendar1" style="width: 390px; height: 270px;"></div>
+
+    <script src="CalendarClass.js"></script>
+    <script>
+        var calendar1 = new CalendarClass("calendar1");
+        calendar1.GetMonthDataFunction = function(year, month) {
+            return [
+                {'date': year + '-' + month + '-01','YEAR': year,'MONTH': month,'DAY':1 ,'WEEKDAY':5,'WEEK':1,'年': year,'月': month,'日':1 ,'周':1,'星期':'星期五','农历日期':'十一月十七','农历节气':''},
+                {'date': year + '-' + month + '-02','YEAR': year,'MONTH': month,'DAY':2 ,'WEEKDAY':6,'WEEK':1,'年': year,'月': month,'日':2 ,'周':1,'星期':'星期六','农历日期':'十一月十八','农历节气':''},
+                {'date': year + '-' + month + '-03','YEAR': year,'MONTH': month,'DAY':3 ,'WEEKDAY':7,'WEEK':2,'年': year,'月': month,'日':3 ,'周':2,'星期':'星期日','农历日期':'十一月十九','农历节气':''},
+                {'date': year + '-' + month + '-04','YEAR': year,'MONTH': month,'DAY':4 ,'WEEKDAY':1,'WEEK':2,'年': year,'月': month,'日':4 ,'周':2,'星期':'星期一','农历日期':'十一月二十','农历节气':''},
+                {'date': year + '-' + month + '-05','YEAR': year,'MONTH': month,'DAY':5 ,'WEEKDAY':2,'WEEK':2,'年': year,'月': month,'日':5 ,'周':2,'星期':'星期二','农历日期':'十一月廿一','农历节气':'小寒'},
+                {'date': year + '-' + month + '-06','YEAR': year,'MONTH': month,'DAY':6 ,'WEEKDAY':3,'WEEK':2,'年': year,'月': month,'日':6 ,'周':2,'星期':'星期三','农历日期':'十一月廿二','农历节气':''},
+                {'date': year + '-' + month + '-07','YEAR': year,'MONTH': month,'DAY':7 ,'WEEKDAY':4,'WEEK':2,'年': year,'月': month,'日':7 ,'周':2,'星期':'星期四','农历日期':'十一月廿三','农历节气':''},
+                {'date': year + '-' + month + '-08','YEAR': year,'MONTH': month,'DAY':8 ,'WEEKDAY':5,'WEEK':2,'年': year,'月': month,'日':8 ,'周':2,'星期':'星期五','农历日期':'十一月廿四','农历节气':''},
+                {'date': year + '-' + month + '-09','YEAR': year,'MONTH': month,'DAY':9 ,'WEEKDAY':6,'WEEK':2,'年': year,'月': month,'日':9 ,'周':2,'星期':'星期六','农历日期':'十一月廿五','农历节气':''},
+                {'date': year + '-' + month + '-10','YEAR': year,'MONTH': month,'DAY':10,'WEEKDAY':7,'WEEK':3,'年': year,'月': month,'日':10,'周':3,'星期':'星期日','农历日期':'十一月廿六','农历节气':''},
+                {'date': year + '-' + month + '-11','YEAR': year,'MONTH': month,'DAY':11,'WEEKDAY':1,'WEEK':3,'年': year,'月': month,'日':11,'周':3,'星期':'星期一','农历日期':'十一月廿七','农历节气':''},
+                {'date': year + '-' + month + '-12','YEAR': year,'MONTH': month,'DAY':12,'WEEKDAY':2,'WEEK':3,'年': year,'月': month,'日':12,'周':3,'星期':'星期二','农历日期':'十一月廿八','农历节气':''},
+                {'date': year + '-' + month + '-13','YEAR': year,'MONTH': month,'DAY':13,'WEEKDAY':3,'WEEK':3,'年': year,'月': month,'日':13,'周':3,'星期':'星期三','农历日期':'十一月廿九','农历节气':''},
+                {'date': year + '-' + month + '-14','YEAR': year,'MONTH': month,'DAY':14,'WEEKDAY':4,'WEEK':3,'年': year,'月': month,'日':14,'周':3,'星期':'星期四','农历日期':'十一月三十','农历节气':''},
+                {'date': year + '-' + month + '-15','YEAR': year,'MONTH': month,'DAY':15,'WEEKDAY':5,'WEEK':3,'年': year,'月': month,'日':15,'周':3,'星期':'星期五','农历日期':'腊月初一','农历节气':''},
+                {'date': year + '-' + month + '-16','YEAR': year,'MONTH': month,'DAY':16,'WEEKDAY':6,'WEEK':3,'年': year,'月': month,'日':16,'周':3,'星期':'星期六','农历日期':'腊月初二','农历节气':''},
+                {'date': year + '-' + month + '-17','YEAR': year,'MONTH': month,'DAY':17,'WEEKDAY':7,'WEEK':4,'年': year,'月': month,'日':17,'周':4,'星期':'星期日','农历日期':'腊月初三','农历节气':''},
+                {'date': year + '-' + month + '-18','YEAR': year,'MONTH': month,'DAY':18,'WEEKDAY':1,'WEEK':4,'年': year,'月': month,'日':18,'周':4,'星期':'星期一','农历日期':'腊月初四','农历节气':''},
+                {'date': year + '-' + month + '-19','YEAR': year,'MONTH': month,'DAY':19,'WEEKDAY':2,'WEEK':4,'年': year,'月': month,'日':19,'周':4,'星期':'星期二','农历日期':'腊月初五','农历节气':''},
+                {'date': year + '-' + month + '-20','YEAR': year,'MONTH': month,'DAY':20,'WEEKDAY':3,'WEEK':4,'年': year,'月': month,'日':20,'周':4,'星期':'星期三','农历日期':'腊月初六','农历节气':'大寒'},
+                {'date': year + '-' + month + '-21','YEAR': year,'MONTH': month,'DAY':21,'WEEKDAY':4,'WEEK':4,'年': year,'月': month,'日':21,'周':4,'星期':'星期四','农历日期':'腊月初七','农历节气':''},
+                {'date': year + '-' + month + '-22','YEAR': year,'MONTH': month,'DAY':22,'WEEKDAY':5,'WEEK':4,'年': year,'月': month,'日':22,'周':4,'星期':'星期五','农历日期':'腊月初八','农历节气':''},
+                {'date': year + '-' + month + '-23','YEAR': year,'MONTH': month,'DAY':23,'WEEKDAY':6,'WEEK':4,'年': year,'月': month,'日':23,'周':4,'星期':'星期六','农历日期':'腊月初九','农历节气':''},
+                {'date': year + '-' + month + '-24','YEAR': year,'MONTH': month,'DAY':24,'WEEKDAY':7,'WEEK':5,'年': year,'月': month,'日':24,'周':5,'星期':'星期日','农历日期':'腊月初十','农历节气':''},
+                {'date': year + '-' + month + '-25','YEAR': year,'MONTH': month,'DAY':25,'WEEKDAY':1,'WEEK':5,'年': year,'月': month,'日':25,'周':5,'星期':'星期一','农历日期':'腊月十一','农历节气':''},
+                {'date': year + '-' + month + '-26','YEAR': year,'MONTH': month,'DAY':26,'WEEKDAY':2,'WEEK':5,'年': year,'月': month,'日':26,'周':5,'星期':'星期二','农历日期':'腊月十二','农历节气':''},
+                {'date': year + '-' + month + '-27','YEAR': year,'MONTH': month,'DAY':27,'WEEKDAY':3,'WEEK':5,'年': year,'月': month,'日':27,'周':5,'星期':'星期三','农历日期':'腊月十三','农历节气':''},
+                {'date': year + '-' + month + '-28','YEAR': year,'MONTH': month,'DAY':28,'WEEKDAY':4,'WEEK':5,'年': year,'月': month,'日':28,'周':5,'星期':'星期四','农历日期':'腊月十四','农历节气':''},
+                {'date': year + '-' + month + '-29','YEAR': year,'MONTH': month,'DAY':29,'WEEKDAY':5,'WEEK':5,'年': year,'月': month,'日':29,'周':5,'星期':'星期五','农历日期':'腊月十五','农历节气':''},
+                {'date': year + '-' + month + '-30','YEAR': year,'MONTH': month,'DAY':30,'WEEKDAY':6,'WEEK':5,'年': year,'月': month,'日':30,'周':5,'星期':'星期六','农历日期':'腊月十六','农历节气':''},
+                {'date': year + '-' + month + '-31','YEAR': year,'MONTH': month,'DAY':31,'WEEKDAY':7,'WEEK':6,'年': year,'月': month,'日':31,'周':6,'星期':'星期日','农历日期':'腊月十七','农历节气':''}
+            ];
+        };
+        calendar1.init();
+    </script>
+</body>
+</html>

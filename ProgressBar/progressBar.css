@@ -1,0 +1,34 @@
+/*进度条区域*/
+.progressAll {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	float: left;
+	height: 30px;
+	width: calc(100% - 112px);
+}
+	.progressAll .progressThis {
+		background: -moz-linear-gradient(left, #ecffed, #c1ffb7);/* Firefox 3.6+ */
+		background: -webkit-linear-gradient(left, #ecffed, #c1ffb7);/* Safari 5.1+, Chrome 10+ */
+		background: -o-linear-gradient(left, #ecffed, #c1ffb7);/* Opera 11.10+ */
+		border-radius: 10px;
+		float: left;
+		height: 30px;
+		position: relative;
+		width: 0%;
+	}
+		.progressAll .progressThis .progressError{
+			background: -moz-linear-gradient(left,  #e2dad4, #e29da0);/* Firefox 3.6+ */
+			background: -webkit-linear-gradient(left,  #e2dad4, #e29da0);/* Safari 5.1+, Chrome 10+ */
+			background: -o-linear-gradient(left,  #e2dad4, #e29da0);/* Opera 11.10+ */
+			border-radius: 10px;
+			float: left;
+			height: 30px;
+			width: 0%;
+		}
+		.progressAll .progressThis p{
+			margin: 5px 10px 5px 0;
+			right: 0;
+			position: absolute;
+			top: 0;
+			width: 60px;
+		}
