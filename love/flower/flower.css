@@ -1,0 +1,150 @@
+html {
+	background: #989fe9;
+	float: left;
+	font-family: 'Petit Formal Script';
+	height: 100%;
+	width: 100%;
+}
+body{
+	float: left;
+	height: calc(100% - 16px);
+	margin: 8px;
+	position: relative;
+	width: calc(100% - 16px);
+}
+
+.h_love_text{
+	float: left;
+	margin: 10px calc(50% - 210pt) 0;
+}
+	.h_love_text .letter{
+		animation: twinkle 2.7s infinite 0.4s;
+		-moz-animation: twinkle 2.7s infinite 0.4s;    /* Firefox */
+		-webkit-animation: twinkle 2.7s infinite 0.4s; /* Safari and Chrome */
+		-o-animation: twinkle 2.7s infinite 0.4s;      /* Opera */
+		
+		color: white;
+		display: block;
+		float: left;
+		font-size: 20pt;
+		font-weight: 600;
+		width: 20pt;
+	}
+	.h_love_text .blank{
+		display: block;
+		float: left;
+		height: 25px;
+		width: 20pt;
+	}
+
+@keyframes twinkle{
+	50% {
+		text-shadow: 0 0 0.25em blue, 0 0 0.35em blue, 0 0 0.45em blue, 0 0 0.55em #666df5, 0 0 0.65em #666df5;
+	}
+}
+/* Firefox */
+@-moz-keyframes twinkle{
+	50% {
+		text-shadow: 0 0 0.25em blue, 0 0 0.35em blue, 0 0 0.45em blue, 0 0 0.55em #666df5, 0 0 0.65em #666df5;
+	}
+}
+/* Safari and Chrome */
+@-webkit-keyframes twinkle{
+	50% {
+		text-shadow: 0 0 0.25em blue, 0 0 0.35em blue, 0 0 0.45em blue, 0 0 0.55em #666df5, 0 0 0.65em #666df5;
+	}
+}
+/* Opera */
+@-o-keyframes twinkle{
+	50% {
+		text-shadow: 0 0 0.25em blue, 0 0 0.35em blue, 0 0 0.45em blue, 0 0 0.55em #666df5, 0 0 0.65em #666df5;
+	}
+}
+
+
+
+
+
+.h_love_heart{
+	animation: love_base 2.7s infinite 0.4s;
+	-moz-animation: love_base 2.7s infinite 0.4s;    /* Firefox */
+	-webkit-animation: love_base 2.7s infinite 0.4s; /* Safari and Chrome */
+	-o-animation: love_base 2.7s infinite 0.4s;      /* Opera */
+	
+	box-shadow: inset 0 0 0 2.5vmin #fff;
+	border-radius: 27px;
+	fill: #FFDDE9;
+	height: 40px;
+	padding: 7px;
+	position: absolute;
+	width: 40px;
+}
+@keyframes love_base{
+	50%, 100% {
+		box-shadow: inset 0 0 0 0 red;
+		transform: scale(1);
+	}
+}
+/* Firefox */
+@-moz-keyframes love_base{
+	50%, 100% {
+		box-shadow: inset 0 0 0 0 red;
+		transform: scale(1);
+	}
+}
+/* Safari and Chrome */
+@-webkit-keyframes love_base{
+	50%, 100% {
+		box-shadow: inset 0 0 0 0 red;
+		transform: scale(1);
+	}
+}
+/* Opera */
+@-o-keyframes love_base{
+	50%, 100% {
+		box-shadow: inset 0 0 0 0 red;
+		transform: scale(1);
+	}
+}
+	.h_love_heart svg{
+		animation: love 2.7s infinite 0.4s;
+		-moz-animation: love 2.7s infinite 0.4s;    /* Firefox */
+		-webkit-animation: love 2.7s infinite 0.4s; /* Safari and Chrome */
+		-o-animation: love 2.7s infinite 0.4s;      /* Opera */
+		
+		fill: #FFDDE9;
+		height: 100%;
+		transform: scale(0.2);
+		width: 100%;
+	}
+	@keyframes love{
+		50%, 100% {
+			box-shadow: inset 0 0 0 0 red;
+			fill: red;
+			transform: scale(1);
+		}
+	}
+	/* Firefox */
+	@-moz-keyframes love{
+		50%, 100% {
+			box-shadow: inset 0 0 0 0 red;
+			fill: red;
+			transform: scale(1);
+		}
+	}
+	/* Safari and Chrome */
+	@-webkit-keyframes love{
+		50%, 100% {
+			box-shadow: inset 0 0 0 0 red;
+			fill: red;
+			transform: scale(1);
+		}
+	}
+	/* Opera */
+	@-o-keyframes love{
+		50%, 100% {
+			box-shadow: inset 0 0 0 0 red;
+			fill: red;
+			transform: scale(1);
+		}
+	}

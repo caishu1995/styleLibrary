@@ -5,12 +5,12 @@
     <title>组件-万花筒</title>
 </head>
 <body>
-    <canvas id="canvas" width="400" height="500" style="background-color:#ccc;"></canvas>
+    <canvas id="canvas" width="500" height="600" style="background-color:#ccc;"></canvas>
 
     <script src="phantoscope.js"></script>
     <script>
         window.onload = function() {
-            var phantoscope = new Phantoscope("canvas");
+            var phantoscope = new Phantoscope("canvas", false);
             phantoscope.init();
         };
     </script>

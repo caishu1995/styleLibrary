@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件-爱-花</title>
+    <!--特色-->
+    <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+    <link rel="stylesheet" href="flower.css">
+</head>
+<body>
+    <div class="h_love_text">
+        <label class="letter">I</label>
+
+        <label class="blank"></label>
+
+        <label class="letter">L</label>
+        <label class="letter">O</label>
+        <label class="letter">V</label>
+        <label class="letter">E</label>
+
+        <label class="blank"></label>
+
+        <label class="letter">Y</label>
+        <label class="letter">O</label>
+        <label class="letter">U</label>
+        <label class="letter">,</label>
+
+        <label class="blank"></label>
+
+        <label class="letter">P</label>
+        <label class="letter">e</label>
+        <label class="letter">n</label>
+        <label class="letter">g</label>
+        <label class="letter">Q</label>
+        <label class="letter">i</label>
+        <label class="letter">a</label>
+        <label class="letter">o</label>
+        <label class="letter">!</label>
+    </div>
+
+    <canvas id="roses" width="400" height="400" style="margin: 0 calc(50% - 200px);"></canvas>
+
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="Flower.js"></script>
+    <script>
+        window.onload = function() {
+            var flower = new Flower("roses", false);
+            flower.init();
+
+            var heart = new Heart("roses", false);
+        };
+    </script>
+</body>
+</html>
