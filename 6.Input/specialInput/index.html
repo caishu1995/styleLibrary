@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+    <title>组件-多部分输入框</title>
+    <link rel="stylesheet" href="specialInput.css">
+</head>
+<body>
+    <div id="inputPart" style="float: left"></div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="specialInput.js"></script>
+    <script>
+        var specialInput = new SpecialInput("inputPart", 6, function(index) {
+            return [
+                {
+                    index: index + '01',
+                    text: '11111111'
+                },{
+                    index: index + '02',
+                    text: '22222222'
+                },{
+                    index: index + '03',
+                    text: '33333333'
+                },{
+                    index: index + '04',
+                    text: '44444444'
+                },{
+                    index: index + '05',
+                    text: '55555555'
+                },{
+                    index: index + '06',
+                    text: '66666666'
+                },{
+                    index: index + '07',
+                    text: '77777777'
+                },{
+                    index: index + '08',
+                    text: '88888888'
+                }
+            ];
+        });
+        specialInput.init();
+    </script>
+</body>
+</html>

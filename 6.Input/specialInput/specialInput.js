@@ -1,10 +1,10 @@
-﻿function SpecialInput(baseId, count) {
-    this.SpecialInputVersion = "2018.0724";
+﻿function SpecialInput(baseId, count, dataFunctionList) {
     this.baseId = baseId;
     this.count = count;
+    this.dataFunctionList = dataFunctionList;
     this.widthList = {
-        inputWidth: 38,
-        pointWidth: 9
+        inputWidth: 38, //输入框宽度
+        pointWidth: 9   //点宽度
     };
 
     this.init = function() {
@@ -47,34 +47,7 @@
 
 
         //展示ul
-        var data = [
-            {
-                index: '011',
-                text: '啊啊啊啊啊啊'
-            },{
-                index: '012',
-                text: '啊啊啊啊'
-            },{
-                index: '013',
-                text: '啊啊啊啊'
-            },{
-                index: '014',
-                text: '啊啊啊啊啊'
-            },{
-                index: '015',
-                text: '啊啊啊'
-            },{
-                index: '016',
-                text: '啊啊啊啊啊'
-            },{
-                index: '017',
-                text: '啊啊啊啊啊'
-            },{
-                index: '018',
-                text: '啊啊啊'
-            }
-        ];
-        //data = { index, text }
+        var data = dataFunctionList($(thisEle).data("index"));
         var _ul = document.createElement("ul");
         _ul.className = "selectPart";
         _ul.style.left = e.target.offsetLeft + 'px';
