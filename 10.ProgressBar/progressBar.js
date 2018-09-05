@@ -1,12 +1,10 @@
 function ProgressBar(baseDomID) {
-    this.progressBarVersion = "2017.1214";
     this.userSet_domID = baseDomID;
 
     //初始化进度条
-    this.init = function(){
-        document.getElementById(this.userSet_domID).innerHTML = getProgressBarHTML();
-    };
-    this.init();
+    (function(that){
+        document.getElementById(that.userSet_domID).innerHTML = getProgressBarHTML();
+    })(this);
 
     //获得初始化的字符串
     function getProgressBarHTML() {

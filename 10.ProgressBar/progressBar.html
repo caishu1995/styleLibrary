@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件-进度条</title>
+    <link rel="stylesheet" href="progressBar.css">
+</head>
+<body>
+    <div style="float: left; height: 32px; width: 787px;" >
+        <div class="progressAll">
+            <div class="progressThis" style="width: 70%;">
+                <p>70%</p>
+                <div class="progressError" style="width: 30%;"></div>
+            </div>
+        </div>
+    </div>
+    <div id="progress1" style="float: left; height: 32px; width: 787px;" ></div>
+
+    <script src="progressBar.js"></script>
+    <script>
+        var progress1 = new ProgressBar("progress1");
+        progress1.changeProgressBarWidth(70, 20, 100);
+    </script>
+</body>
+</html>
