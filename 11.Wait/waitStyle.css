@@ -1,0 +1,17 @@
+/* 等待画面1 */
+.h_wait1{ float: left; padding: 10px calc(25% - 205px); width: 410px; }
+	.h_wait1 .text{ background-color: #4a4a4a; color: white; float: left; font-size: 32px; font-weight: 600; overflow: hidden; padding: 3px 20px; position: relative; text-align: center; }
+		.h_wait1 .text:before{ background-color: #7a7a7a; content: ""; height: 50px; left: 0px; opacity: 0.5; position: absolute; top: 0; width: 100%; -webkit-animation: move 1S infinite;}
+	.h_wait1 .circle{ border: 1px solid; border-radius: 5px; float: left; height: 10px; margin: 20px 10px 0; width: 10px; -webkit-animation: jump 1S infinite; }
+		.h_wait1 .circle:nth-child(2){ border-color: #337AB7; background: #337AB7; animation-delay: 0S }
+		.h_wait1 .circle:nth-child(3){ border-color: #e6b0b2; background: #e6b0b2; animation-delay: 0.33S }
+		.h_wait1 .circle:nth-child(4){ border-color: #abe6ae; background: #abe6ae; animation-delay: 0.66S }
+@-webkit-keyframes move{
+    0%   { -webkit-transform: translateX(-150px) rotate(-30deg);}
+    100%  { -webkit-transform: translateX(150px) rotate(-30deg);}
+}
+@-webkit-keyframes jump{
+    0%   { -webkit-transform: translateY(0px)}
+    33.3%  { -webkit-transform: translateY(-10px)}
+    66.6%  { -webkit-transform: translateY(0px)}
+}

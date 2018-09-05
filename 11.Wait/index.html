@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件-等待画面</title>
+    <link rel="stylesheet" href="waitStyle.css">
+</head>
+<body>
+    <!-- 第一个等待画面 -->
+    <div class="h_wait1">
+        <div class="text">正在解析，请稍等</div>
+        <div class="circle"></div><div class="circle"></div><div class="circle"></div>
+    </div>
+    <div id="wait1_js" class="h_wait1">
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="waitInit.js"></script>
+    <script>
+        /* 通过js创建 */
+        waitStyle1("正在解析，请稍等", "wait1_js");
+    </script>
+</body>
+</html>
