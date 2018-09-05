@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件-万花筒</title>
+</head>
+<body>
+    <canvas id="anticlockwise" width="500" height="600" style="background-color:#ccc;"></canvas>
+    <canvas id="clockwise" width="500" height="600" style="background-color:#ccc;"></canvas>
+
+    <script src="phantoscope.js"></script>
+    <script>
+        window.onload = function() {
+            var anticlockwise = new Phantoscope("anticlockwise", false);
+            anticlockwise.init();
+
+            var clockwise = new Phantoscope("clockwise", true);
+            clockwise.init();
+        };
+    </script>
+</body>
+</html>
