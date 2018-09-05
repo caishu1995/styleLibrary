@@ -1,0 +1,152 @@
+html{
+	height: 100%;
+	width: 100%;
+}
+body{
+	height: calc(100% - 20px);
+	margin: 10px;
+	min-height: 600px;
+	min-width: 1280px;
+	width: calc(100% - 20px);
+}
+.carouselDiv{
+	border: 1px solid #c5c5c5; 
+	float: left;
+	height: 100%;
+	min-height: 600px;
+	min-width: 1280px;
+	width: 100%;
+}
+	.carouselDiv .leftDiv{
+		border-right: 3px solid #c5c5c5; 
+		float: left;
+		height: 100%;
+		overflow: hidden;
+		width: 30%;
+	}
+		.carouselDiv .leftDiv ul{
+			float: left;
+			height: 100%;
+			list-style: none;
+			margin: 0;
+			overflow-x: hidden;
+			overflow-y: auto;
+			padding: 0;
+			width: calc(100% + 20px);
+		}
+			.carouselDiv .leftDiv ul li{
+				border-bottom: 1px dotted #c5c5c5; 
+				float: left;
+				height: 186px;
+				padding: 20px 50px;
+				overflow: hidden;
+				width: calc(100% - 102px);
+			}
+				.carouselDiv .leftDiv ul li img{
+					border: 5px solid;
+					height: 176px;
+					width: calc(100% - 10px);
+				}
+				.carouselDiv .leftDiv ul li img:hover{
+					transform: scale(1.2);
+					-webkit-transform: scale(1.2);
+				}
+	.carouselDiv .rightDiv{
+		float: left;
+    	height: 100%;
+		width: calc(70% - 3px);
+	}
+		.carouselDiv .rightDiv .rightImgClass{
+			float: left; 
+			height: 400px;
+			position: relative;
+			margin: calc(50vh - 213px) calc(50% - 300px);
+			width: 600px;
+		}
+			.carouselDiv .rightDiv .rightImgClass img{
+				border: 10px solid;
+				float: left; 
+				height: calc(100% - 20px);
+				width: calc(100% - 20px);
+			}
+			.carouselDiv .rightDiv .rightImgClass div{
+				background-color: black;
+				float: left; 
+				height: 50px;
+				left: 0;
+				opacity: 0;
+				position: absolute;
+				top: calc(100% - 50px);
+				width: 100%;
+				z-index: 1;
+			}
+			.carouselDiv .rightDiv .rightImgClass:hover div{
+				opacity: 0.3;
+			}
+				.carouselDiv .rightDiv .rightImgClass div p{
+					color: white;
+					float: left;
+					font-size: 18px;
+					margin: 13px 13px;
+					padding: 0;
+					z-index: 2;
+				}
+				.carouselDiv .rightDiv .rightImgClass div button{
+					background-color: initial;
+					border: 1px solid white;
+					float: right;
+					font-size: 18px;
+					margin: 8px 15px;
+					width: 65px;
+				}
+					.carouselDiv .rightDiv .rightImgClass div button:hover{
+						transform: scale(1.2);
+						-webkit-transform: scale(1.2);
+					}
+					.carouselDiv .rightDiv .rightImgClass div button a{
+						color: white;
+						text-decoration: none;
+					}
+				
+
+
+/*各种背景颜色设置*/
+.carouselDiv .leftDiv{
+	background-color: #FBF2E1;
+}
+	.carouselDiv .leftDiv ul li img{
+		border-color: #F9BC7E;
+	}
+.carouselDiv .rightDiv{
+	background: -webkit-linear-gradient(white, #131772); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(white, #131772); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(white, #131772); /* Firefox 3.6 - 15 */
+	background: linear-gradient(white, #131772); /* 标准的语法 */
+}
+.carouselDiv .rightDiv img, .selectLi img{
+	border-image: -webkit-linear-gradient( #ECECFA, #D6DAF7) 30 30 !important;/*#D6DAF7*/
+	border-image: -moz-linear-gradient( #ECECFA, #D6DAF7) 30 30 !important;
+	border-image: linear-gradient( #ECECFA, #D6DAF7) 30 30 !important;
+}
+
+/*大屏*/
+@media screen and (min-width: 1800px){
+	.carouselDiv .rightDiv .rightImgClass{
+		height: calc(100% - 100px);
+		margin: 50px 70px;
+		width: calc(100% - 140px);
+	}
+		.carouselDiv .rightDiv .rightImgClass div{
+			height: 100px;
+			top: calc(100% - 100px);
+		}
+			.carouselDiv .rightDiv .rightImgClass div p{
+				font-size: 32px;
+				margin: 29px 13px;
+			}
+			.carouselDiv .rightDiv .rightImgClass div button{
+				font-size: 32px;
+			    margin: 27px 15px;
+				width: 100px;
+			}
+}

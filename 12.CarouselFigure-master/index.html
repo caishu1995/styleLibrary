@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>轮播展示图片跳转页面</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div id="baseDiv" class="carouselDiv"></div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+	<script src="CarouselFigure.js"></script>
+    <script>
+        var getData = [{
+            "systemName": "myGithub",
+            "hrefTo":"https://github.com/",
+            "srcFrom":"img/pic1.png"
+        },{
+            "systemName": "百度系统",
+            "hrefTo":"http://www.baidu.com",
+            "srcFrom":"img/pic2.png"
+        },{
+            "systemName": "百度新闻",
+            "hrefTo":"http://news.baidu.com/",
+            "srcFrom":"img/pic3.png"
+        },{
+            "systemName": "myGithub",
+            "hrefTo":"https://github.com/",
+            "srcFrom":"img/pic1.png"
+        },{
+            "systemName": "百度系统",
+            "hrefTo":"http://www.baidu.com",
+            "srcFrom":"img/pic2.png"
+        },{
+            "systemName": "百度新闻",
+            "hrefTo":"http://news.baidu.com/",
+            "srcFrom":"img/pic3.png"
+        }];//后台请传对应系统在上述数组中的序号
+        $carouselFigure.init(getData, "baseDiv");
+    </script>
+</body>
+</html>
