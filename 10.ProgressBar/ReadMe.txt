@@ -12,8 +12,8 @@
     progressBar.css ：样式文件
     progressBar.html：主界面
 
-使用说明： 主界面加入div，js 中创建ProgressBar对象，调用changeProgressBarWidth函数
-引用说明： 无
+使用说明： 打开看即可
+引用说明： 引入css ,支持js创建和html直接写出两种方式
 其他说明： 无
 
 问题： 无
