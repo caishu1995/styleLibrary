@@ -1,0 +1,152 @@
+body{
+	font-family: Comic Sans MS, Arial, sans-serif;
+	line-height: 1.25;
+}
+
+
+/* 基础遮罩层样式 */
+.overlay {
+	background: rgba(153,204,51,0.9);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+	.overlay .overlay_close {
+		background: url(cross.png) no-repeat center center;
+		border: none;
+		color: transparent;
+		height: 80px;
+		overflow: hidden;
+		outline: none;
+		position: absolute;
+		right: 20px;
+		text-indent: 200%;
+		top: 20px;
+		width: 80px;
+		z-index: 100;
+	}
+	.overlay nav {
+		font-size: 54px;
+		height: 60%;
+		position: relative;
+		text-align: center;
+		top: 50%;
+		
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	.overlay ul {
+		display: inline-block;
+		height: 100%;
+		list-style: none;
+		margin: 0 auto;
+		padding: 0;
+		position: relative;
+	}
+		.overlay ul li {
+			display: block;
+			height: 20%;
+			height: 20%;
+			min-height: 54px;
+		}
+			.overlay ul li a {
+				color: #fff;
+				display: block;
+				font-weight: 300;
+				text-decoration: none;
+				
+				-webkit-transition: color 0.2s;
+				transition: color 0.2s;
+			}
+			.overlay ul li a:hover,
+			.overlay ul li a:focus {
+				color: #e3fcb1;
+			}
+.overlay_hide{
+	display: none;
+}
+.overlay_visibility{
+	opacity: 0;         /* 增加透明度 */
+	visibility: hidden; /* 隐藏元素，但可以点击下侧层的内容 */
+}
+
+
+
+/* 从上往下滚入，从上往下滚出 */
+.overlay_scroll1 {
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+	.overlay_scroll1.open {
+		opacity: 1;
+		visibility: visible;
+		
+		-webkit-transition: opacity 0.5s;
+		transition: opacity 0.5s;
+	}
+	.overlay_scroll1 nav {
+		/* 拉远点距离能看出3D效果 */
+		-webkit-perspective: 1200px;
+		perspective: 1200px;
+	}
+		.overlay_scroll1 nav ul {
+			opacity: 0.4;
+			
+			-webkit-transform: translateY(-25%) rotateX(45deg);
+			transform: translateY(-25%) rotateX(45deg);
+			
+			-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+			transition: transform 0.5s, opacity 0.5s;
+		}
+		.overlay_scroll1.open nav ul {
+			opacity: 1;
+			
+			-webkit-transform: rotateX(0deg);
+			transform: rotateX(0deg);
+		}
+		.overlay_scroll1.close nav ul {
+			-webkit-transform: translateY(25%) rotateX(-45deg);
+			transform: translateY(25%) rotateX(-45deg);
+		}
+
+
+/* 从右下往左上滚入，原路滚出 */
+.overlay_scroll2 {
+	-webkit-transform: translateX(300px) translateY(200px);
+	transform: translateX(300px) translateY(200px);
+	
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s, -webkit-transform 0.5S;
+	transition: opacity 0.5s, visibility 0s 0.5s, transform 0.5S;
+}
+	.overlay_scroll2.open {
+		opacity: 1;
+		visibility: visible;
+		
+		-webkit-transform: translateX(0px) translateY(0px);
+		transform: translateX(0px) translateY(0px);
+		
+		-webkit-transition: opacity 0.5s, -webkit-transform 0.5S;
+		transition: opacity 0.5s, transform 0.5S;
+	}
+
+
+/* 放大展示，缩小隐藏 */
+.overlay_scale {
+	-webkit-transform: scale(0.7);
+	transform: scale(0.7);
+	
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s, -webkit-transform 0.5S;
+	transition: opacity 0.5s, visibility 0s 0.5s, transform 0.5S;
+}
+	.overlay_scale.open {
+		opacity: 1;
+		visibility: visible;
+		
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		
+		-webkit-transition: opacity 0.5s, -webkit-transform 0.5S;
+		transition: opacity 0.5s, transform 0.5S;
+	}
