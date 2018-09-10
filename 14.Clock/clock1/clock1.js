@@ -2,7 +2,7 @@ var Racing = {
     baseCanvas: "clock1", //canvas的id
     context: null,
     size: {
-        height: 600,
+        height: 400,
         width: 330
     },
 
