@@ -71,6 +71,10 @@ body{
 	opacity: 0;         /* 增加透明度 */
 	visibility: hidden; /* 隐藏元素，但可以点击下侧层的内容 */
 }
+.overlay_visibility.open {
+	opacity: 1;
+	visibility: visible;
+}
 
 
 
@@ -80,9 +84,6 @@ body{
 	transition: opacity 0.5s, visibility 0s 0.5s;
 }
 	.overlay_scroll1.open {
-		opacity: 1;
-		visibility: visible;
-		
 		-webkit-transition: opacity 0.5s;
 		transition: opacity 0.5s;
 	}
@@ -121,9 +122,6 @@ body{
 	transition: opacity 0.5s, visibility 0s 0.5s, transform 0.5S;
 }
 	.overlay_scroll2.open {
-		opacity: 1;
-		visibility: visible;
-		
 		-webkit-transform: translateX(0px) translateY(0px);
 		transform: translateX(0px) translateY(0px);
 		
@@ -141,12 +139,41 @@ body{
 	transition: opacity 0.5s, visibility 0s 0.5s, transform 0.5S;
 }
 	.overlay_scale.open {
-		opacity: 1;
-		visibility: visible;
-		
 		-webkit-transform: scale(1);
 		transform: scale(1);
 		
 		-webkit-transition: opacity 0.5s, -webkit-transform 0.5S;
 		transition: opacity 0.5s, transform 0.5S;
 	}
+
+
+/* 横向打开 */
+.overlay_widthChange {
+	opacity: 1;
+	left: 50%;
+	width: 0;
+	
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	
+	-webkit-transition: width 0.5S, visibility 0s 0.8s;
+	transition: width 0.5S, visibility 0s 0.8s;
+}
+	.overlay_widthChange nav, .overlay_widthChange .overlay-close {
+		opacity: 0;
+		-webkit-transition: opacity 0.3s;
+		transition: opacity 0.3s;
+	}
+	.overlay_widthChange.open {
+		width: 100%;
+		
+		-webkit-transition: width 0.5S;
+		transition: width 0.5S;
+	}
+		.overlay_widthChange.open nav, .overlay_widthChange.open .overlay-close {
+			opacity: 1;
+			-webkit-transition-delay: 0.3s;
+			transition-delay: 0.3s;
+		}
+
+
