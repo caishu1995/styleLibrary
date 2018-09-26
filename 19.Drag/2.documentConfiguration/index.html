@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="documentConfig.css">
+</head>
+<body>
+    <div id="part1" class="centerPart">
+        <div class="leftPart">
+            <div class="basePart" ondragover="event.preventDefault()" ondrop="dropFunction(this, event)"></div>
+            <button onclick="saveOnClickFunction(this)">保存配置</button>
+        </div>
+        <div class="rightPart">
+            <div class="toolCase">
+                <div class="titlePart">工具箱</div>
+                <div class="otherPart">
+                    <div class="rowPart" data-type="characters" draggable="true" ondragstart="event.dataTransfer.setData('Text', this.dataset.type);">
+                        <div class="legend"><span class="textLegend">ABCDEFGHIJ</span></div>
+                        <label>text</label>
+                    </div>
+                    <div class="rowPart" data-type="table" draggable="true" ondragstart="event.dataTransfer.setData('Text', this.dataset.type);">
+                        <div class="legend">
+                            <table class="tableLegend">
+                                <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                                <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                                <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                            </table>
+                        </div>
+                        <label>table</label>
+                    </div>
+                </div>
+            </div>
+            <div class="detailCase">
+                <div class="titlePart">属性<button onclick="deleteToolFunction(this)">删除</button></div>
+                <div class="otherPart"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="documentConfig.js"></script>
+</body>
+</html>

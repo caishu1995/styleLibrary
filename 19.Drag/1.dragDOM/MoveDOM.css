@@ -1,0 +1,18 @@
+html{
+	position: relative;
+}
+
+/* 选择区域 */
+.selectArea{
+	background-color: #e8ffff;
+	border: 1px solid #c5c5c5;
+	margin: 0 !important;
+	opacity: 0.5;
+	position: absolute;
+	width: 1px;
+	z-index: 1;
+}
+/* 选中的样式 */
+.selected{
+	background-color: green;
+}

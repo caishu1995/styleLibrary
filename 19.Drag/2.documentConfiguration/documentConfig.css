@@ -1,0 +1,320 @@
+html, body{
+	float: left;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+
+.centerPart{
+	float: left;
+	height: 924px;
+	margin: 8px calc(50% - 500px);
+	width: 1000px;
+}
+
+/* 左侧 */
+.leftPart{
+	float: left;
+	height: 100%;
+	width: 632px;
+}
+	.leftPart .basePart{
+		border: 1px solid #5b5b5b;
+		height: 891px;
+		float: left;
+		width: calc(100% - 2px);
+	}
+		/* 左侧-容器区 */
+		.leftPart .basePart .partContainer{
+			border: 1px dotted #c5c5c5;
+			height: 50px;
+			position: relative;
+			width: 100%;
+		}
+		/* 左侧-文字 */
+		.leftPart .basePart .charactersStyle{
+			float: left;
+			height: 21px;
+			margin: 3px;
+			position: absolute;
+			width: 160px;
+			
+			white-space: pre-wrap; /*css-3*/
+			white-space: -moz-pre-wrap; /*Mozilla,since1999*/
+			white-space: pre-wrap; /*Opera4-6*/
+			white-space: -o-pre-wrap; /*Opera7*/
+			word-wrap: break-word; /*InternetExplorer5.5+*/
+		}
+		/* 左侧-表格 */
+		.leftPart .basePart .tableStyle{
+			border-left: 1px solid #c5c5c5;
+			float: left;
+			height: 21px;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+		}
+			.leftPart .basePart .tableStyle li{
+				border-top: 1px solid #c5c5c5;
+				border-bottom: 1px solid #c5c5c5;
+				border-right: 1px solid #c5c5c5;
+				float: left;
+				height: calc(100% - 2px);
+				pointer-events: none;
+				width: 50px;
+			}
+			.leftPart .basePart .tableStyle .deleteStyle{
+				display: none;
+			}
+		/* 选中区域 */
+		.leftPart .basePart .seeDetail{
+			border: 1px solid #ad020c;
+		}
+	.leftPart button{
+		background-color: #d4ffcb;
+		border: 1px solid #c5c5c5;
+		border-radius: 5px;
+		color: #4d504a;
+		float: right;
+		height: 25px;
+		margin: 3px 5px;
+		width: 70px;
+	}
+
+
+/* 右侧 */
+.rightPart{
+	float: right;
+	height: 100%;
+	margin-left: 20px;
+	width: calc(100% - 652px);
+}
+	/*工具箱区*/
+	.rightPart .toolCase{
+		border: 1px dotted #a9a9a9;
+		height: 300px;
+		width: calc(100% - 2px);
+	}
+		.rightPart .toolCase .rowPart{
+			height: 60px;
+		}
+			.rightPart .toolCase .rowPart:hover{
+				background-color: #d4fff5;
+			}
+				.rightPart .toolCase .rowPart:hover label{
+					transform: scale(1.2);
+					-webkit-transform: scale(1.2);
+				}
+			.rightPart .toolCase .rowPart label{
+				float: left;
+				font-size: 25px;
+				font-weight: bolder;
+				margin-left: 20px;
+				padding: 7px 5px;
+			}
+			.rightPart .toolCase .rowPart .legend{
+				float: left;
+				height: 100%;
+				width: 50%;
+			}
+				/* 容器 */
+				.rightPart .toolCase .rowPart .legend .containerLegend{
+					border: 1px dashed #d5d5d5;
+					float: left;
+					height: 30px;
+					margin: 9px 10px;
+					width: calc(100% - 22px);
+				}
+				/* 文字 */
+				.rightPart .toolCase .rowPart .legend .textLegend{
+					float: left;
+					font-size: 25px;
+					padding: 8px 10px;
+					width: calc(100% - 20px);
+				}
+				/* 表格 */
+				.rightPart .toolCase .rowPart .legend .tableLegend{
+					border-collapse: collapse;
+					float: left;
+					margin: 5px 10px;
+					width: calc(100% - 20px);
+				}
+					.rightPart .toolCase .rowPart .legend .tableLegend tr{
+						width: 100%;
+					}
+					.rightPart .toolCase .rowPart .legend .tableLegend tr td{
+						border: 1px solid #d5d5d5;
+						height: 10.6px;
+						width: 20%;
+					}
+	/* 属性 */
+	.rightPart .detailCase{
+		border: 1px solid #C5C5C5;
+		height: 500px;
+		margin-top: 90px;
+		width: calc(100% - 2px);
+	}
+		.rightPart .detailCase label{
+			color: #585858;
+			float: left;
+			font-size: 20px;
+			font-weight: 600;
+			padding: 5px;
+			text-align: right;
+			width: 60px;
+		}
+		.rightPart .detailCase input{
+			border: 0;
+			border-bottom: 1px solid #C5C5C5;
+			float: left;
+			font-size: 15px;
+			height: 25px;
+			margin: 5px 10px;
+			padding: 0 10px;
+			text-align: center;
+			width: calc(100% - 110px);
+		}
+		.rightPart .detailCase textarea{
+			border: 1px solid #C5C5C5;
+			float: left;
+			font-size: 15px;
+			height: 50px;
+			margin: 5px 10px;
+			padding: 0 10px;
+			text-align: left;
+			resize: none;
+			width: calc(100% - 112px);
+		}
+		.rightPart .detailCase select{
+			border: 0;
+			border-bottom: 1px solid #C5C5C5;
+			float: left;
+			font-size: 15px;
+			height: 20px;
+			margin: 5px 10px;
+			padding: 0 50px;
+			text-align: center;
+			width: calc(100% - 60px);
+		}
+		/* 行内容 */
+		.rightPart .rowPart{
+			border-bottom: 1px solid #C5C5C5;
+			float: left;
+			height: 35px;
+			width: 100%;
+			
+			transform: scale(1);
+			-webkit-transform: scale(1);
+		}
+		/* 两行 */
+		.rightPart .twoRow{
+			border-bottom: 1px solid #C5C5C5;
+			float: left;
+			height: 60px;
+			width: 100%;
+		}
+			.rightPart .twoRow > label{
+				padding: 17px 5px;
+			}
+			.rightPart .twoRow .rowDetailContent{
+				float: left;
+				height: 100%;
+				width: calc(100% - 70px);
+			}
+				.rightPart .twoRow .rowDetailContent .rowPart{
+					border-bottom: 0;
+					height: 30px;
+				}
+					.rightPart .twoRow .rowDetailContent .rowPart label{
+						float: left;
+						font-size: 14px;
+						padding: 5px 5px;
+						width: 30px;
+					}
+					.rightPart .twoRow .rowDetailContent .rowPart input{
+						height: 24px;
+						margin: 3px 10px;
+						padding: 0 3px;
+						width: calc(100% - 66px);
+					}
+		/* 多行 */
+		.rightPart .severalRow{
+			border-bottom: 1px solid #C5C5C5;
+			float: left;
+		}
+			.rightPart .severalRow table{
+				border-collapse: collapse;
+				float: left;
+				table-layout:fixed;
+				width: calc(100% - 71px);
+			}
+				.rightPart .severalRow td{
+					float: left;
+					height: 20px;
+					text-align: center;
+					padding: 3px 0;
+				}
+					.rightPart .severalRow td:nth-child(1){
+						width: 25%;
+					}
+					.rightPart .severalRow td:nth-child(2){
+						width: 25%;
+					}
+					.rightPart .severalRow td:nth-child(3){
+						width: 25%;
+					}
+					.rightPart .severalRow td:nth-child(4){
+						width: calc(25% - 4px);
+					}
+					.rightPart .severalRow td input{
+						float: left;
+						height: 19px;
+						margin: 0px 3px;
+						padding: 0;
+						width: calc(100% - 6px);
+					}
+					.rightPart .severalRow td button{
+						background-color: #ff0500;
+						border: 1px solid #c5c5c5;
+						border-radius: 3px;
+						color: white;
+						font-size: 14px;
+						padding: 1px 10px;
+					}
+					.rightPart .severalRow td .SaveButton{
+						background-color: #4a49ff;
+					}
+				.rightPart .severalRow thead td {
+					border-bottom: 1px solid #C5C5C5;
+					border-left: 1px solid #C5C5C5;
+				}
+				.rightPart .severalRow tbody{
+					border-left: 1px solid #C5C5C5;
+				}
+	/* 标题区域 */
+	.rightPart .titlePart{
+		background-color: #55ab52;
+		color: white;
+		font-size: 20px;
+		font-weight: bolder;
+		height: 25px;
+		padding: 10px 50px;
+		width: calc(100% - 100px);
+	}
+		.rightPart .titlePart button{
+			background-color: white;
+			border: 1px solid #c5c5c5;
+			border-radius: 3px;
+			color: red;
+			float: right;
+			height: 25px;
+			width: 70px;
+		}
+	/* 其他区域 */
+	.rightPart .otherPart{
+		float: left;
+		width: 100%;
+	}

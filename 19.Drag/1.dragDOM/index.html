@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖动数据到固定区域</title>
+
+    <link rel="stylesheet" href="MoveDOM.css">
+    <style>
+        *{
+            font-size: 14px;
+        }
+        .partStyle{
+            border: 1px solid #c5c5c5;
+            float: left;
+            height: 87px;
+            margin: 5px 0;
+            padding: 0 10px;
+            width: calc(33% - 22px);
+        }
+            .partStyle div{
+                border: 1px dotted #c5c5c5;
+                float: left;
+                margin: 3px 5px;
+                width: calc(33% - 12px);
+            }
+        label{
+            float: left;
+            width: 100%;
+        }
+        .part1{
+            background-color: yellow;
+            border: 0 !important;
+            margin: 5px !important;
+            width: 100% !important;
+        }
+        .part2{
+            background-color: green;
+            border: 0 !important;
+        }
+        .part2 div{
+            width: 75px;
+        }
+    </style>
+</head>
+<body>
+    <label>定向拖拽-id</label>
+    <div id="part11" class="partStyle">
+        <div data-needMoveIndex="part11_1">pid:12</div>
+        <div data-needMoveIndex="part11_2">pid:13</div>
+        <div data-needMoveIndex="part11_3">pid:14</div>
+        <div data-needMoveIndex="part11_4">pid:15</div>
+        <div data-needMoveIndex="part11_5">pid:16</div>
+        <div data-needMoveIndex="part11_6">pid:17</div>
+        <div data-needMoveIndex="part11_7">pid:18</div>
+        <div data-needMoveIndex="part11_8">pid:19</div>
+    </div>
+    <div id="part12" class="partStyle"></div>
+
+    <label>定向拖拽-class</label>
+    <div id="part21" class="partStyle">
+        <div data-needMoveIndex="part21_1">pid:22</div>
+        <div data-needMoveIndex="part21_2">pid:23</div>
+        <div data-needMoveIndex="part21_3">pid:24</div>
+        <div data-needMoveIndex="part21_4">pid:25</div>
+        <div data-needMoveIndex="part21_5">pid:26</div>
+        <div data-needMoveIndex="part21_6">pid:27</div>
+        <div data-needMoveIndex="part21_7">pid:28</div>
+        <div data-needMoveIndex="part21_8">pid:29</div>
+    </div>
+    <div id="part22" class="class1 partStyle"><label>支持从第一个框移动到这，也支持移回去</label></div>
+    <div id="part23" class="class1 partStyle"><label>支持从第一个框移动到这，也支持移回去</label></div>
+
+    <label>非定向拖拽</label>
+    <div id="part31" class="partStyle">
+        <div data-needMoveIndex="part31_1">pid:32</div>
+        <div data-needMoveIndex="part31_2">pid:33</div>
+        <div data-needMoveIndex="part31_3">pid:34</div>
+        <div data-needMoveIndex="part31_4">pid:35</div>
+        <div data-needMoveIndex="part31_5">pid:36</div>
+        <div data-needMoveIndex="part31_6">pid:37</div>
+        <div data-needMoveIndex="part31_7">pid:38</div>
+        <div data-needMoveIndex="part31_8">pid:39</div>
+    </div>
+    <div id="part32" class="partStyle"></div>
+    <div id="part33" class="partStyle"></div>
+
+    <label>部分允许拖动</label>
+    <div id="part41" class="partStyle">
+        <div data-needMoveIndex="part31_1">允许拖动1</div>
+        <div data-needMoveIndex="part31_2">允许拖动2</div>
+        <div data-needMoveIndex="part31_3">允许拖动3</div>
+        <div>不允许拖动1</div>
+        <div>不允许拖动2</div>
+        <div>不允许拖动3</div>
+    </div>
+    <div id="part42" class="partStyle"></div>
+
+    <label>多层次拖拽</label>
+    <div id="part51" class="partStyle">
+        <div class="part1">
+            <div data-needMoveIndex="part51_1">可拖动1</div>
+            <div data-needMoveIndex="part51_2">可拖动2</div>
+        </div>
+        <div class="part1">
+            <div class="part2" data-canDrop=true style="width: calc(67% - 8px);"><div data-needMoveIndex="part51_3">可拖动3</div></div>
+            <div class="part2"><div data-needMoveIndex="part51_4">可拖动4</div></div>
+        </div>
+    </div>
+    <div id="part52" class="partStyle"></div>
+
+    <script src="MoveDOM.js"></script>
+    <script>
+        var moveObj = new MoveDOM();
+        //moveToDiv moveFromDiv 如果支持多个，请用-连接
+        moveObj.describeObj = [{
+            thisDivId: "part11",
+            moveToDiv: "#part12"
+        },{
+            moveFromDiv: "#part11",
+            thisDivId: "part12"
+        },{
+            moveFromDiv: ".class1",
+            thisDivId: "part21",
+            moveToDiv: ".class1"
+        },{
+            moveFromDiv: "#part21",
+            thisDivId: "part22",
+            moveToDiv: "#part21"
+        },{
+            moveFromDiv: "#part21",
+            thisDivId: "part23",
+            moveToDiv: "#part21"
+        },{
+            moveFromDiv: "*",
+            thisDivId: "part31",
+            moveToDiv: "*"
+        },{
+            moveFromDiv: "*",
+            thisDivId: "part32",
+            moveToDiv: "*"
+        },{
+            moveFromDiv: "*",
+            thisDivId: "part33",
+            moveToDiv: "*"
+        },{
+            moveFromDiv: "*",
+            thisDivId: "part41",
+            moveToDiv: "*"
+        },{
+            moveFromDiv: "*",
+            thisDivId: "part42",
+            moveToDiv: "*"
+        },{
+            moveFromDiv: "*",
+            thisDivId: "part51",
+            moveToDiv: "*"
+        },{
+            moveFromDiv: "*",
+            thisDivId: "part52",
+            moveToDiv: "*"
+        }];
+        moveObj.init();
+    </script>
+</body>
+</html>
