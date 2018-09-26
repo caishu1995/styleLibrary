@@ -106,6 +106,71 @@ function doorFunction() {
     $(this).parents(".overlay_widthChange").removeClass("open");
 
     setTimeout(function() {
-        $(this).parents(".overlay_widthChange").removeClass("overlay_widthChange");
+        $(".overlay_widthChange").removeClass("overlay_widthChange");
     }, 500);
 }
+
+/// --------------------------------------------------------------------------------------------------
+
+/// 横向推出
+//横向打开
+$(".pushRight").click(function() {
+    $("body").addClass("overlay_waitPushRight");
+    setTimeout(function() {
+        $("body").addClass("overlay_pushRight");
+        $(".overlay_visibility").addClass("open");
+        $(".overlay_visibility button").get(0).onclick = pushRightFunction;
+    }, 300);
+});
+//横向关闭
+function pushRightFunction() {
+    $(this).parents(".open").removeClass("open");
+    $(".overlay_pushRight").removeClass("overlay_pushRight");
+    setTimeout(function() {
+        $("body").removeClass("overlay_waitPushRight");
+    }, 300);
+}
+
+/// --------------------------------------------------------------------------------------------------
+
+/// 缩小主页面并从下往上推
+//缩小主页面并从下往上推
+$(".pushTop").click(function() {
+    $("body").addClass("overlay_waitPushTop");
+    setTimeout(function() {
+        $("body").addClass("overlay_pushTop");
+        $(".overlay_visibility").addClass("open");
+        $(".overlay_visibility button").get(0).onclick = pushTopFunction;
+    }, 300);
+});
+//放大并从下侧推出
+function pushTopFunction() {
+    $(this).parents(".open").removeClass("open");
+    $(".overlay_pushTop").removeClass("overlay_pushTop");
+    setTimeout(function() {
+        $("body").removeClass("overlay_waitPushTop");
+    }, 300);
+}
+
+/// --------------------------------------------------------------------------------------------------
+
+/// svg改变
+//svg打开
+$(".pageTurning").click(function() {
+    // setTimeout(function() {
+    // var to = "m 0,0 1439.999975,0 0,805.99999 -1439.999975,0 z";
+    var to = 'M0,0C0,0,1439.999975,0,1439.999975,0C1439.999975,0,1439.999975,805.99999,1439.999975,805.99999C1439.999975,805.99999,0,805.99999,0,805.99999C0,805.99999,0,0,0,0';
+        $('.overlay_svg svg path').animate( { 'd' : to }, 400, "linear" );
+    //     $(".overlay_visibility").addClass("open");
+    //     $(".overlay_visibility button").get(0).onclick = pageTurningFunction;
+    // }, 300);
+});
+//svg关闭
+function pageTurningFunction() {
+    $(this).parents(".open").removeClass("open");
+    $(".overlay_pushTop").removeClass("overlay_pushTop");
+    setTimeout(function() {
+        $("body").removeClass("overlay_waitPushTop");
+    }, 300);
+}
+

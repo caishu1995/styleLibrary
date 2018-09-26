@@ -1,7 +1,38 @@
-body{
-	font-family: Comic Sans MS, Arial, sans-serif;
-	line-height: 1.25;
+html{
+	height: 100%;
+	width: 100%;
 }
+body{
+	background: #dddddd;
+	font-family: Comic Sans MS, Arial, sans-serif;
+	float: left;
+	height: 100%;
+	line-height: 1.25;
+	margin: 0;
+	overflow: hidden;
+	width: 100%;
+}
+.buttonList{
+	background: white;
+	height: 50%;
+	padding: 8px;
+	width: calc(100% - 16px);
+}
+	.buttonList button{
+		background: white;
+		border: 1px solid #777777;
+		border-radius: 10px;
+		color: #777777;
+		font-size: 18px;
+		font-weight: bold;
+		margin: 10px 8px;
+		outline: none;
+		padding: 8px 20px;
+	}
+		.buttonList button:hover{
+			background: #777777;
+			color: white;
+		}
 
 
 /* 基础遮罩层样式 */
@@ -75,6 +106,14 @@ body{
 	opacity: 1;
 	visibility: visible;
 }
+.overlay_svg{
+	opacity: 0;         /* 增加透明度 */
+	visibility: hidden; /* 隐藏元素，但可以点击下侧层的内容 */
+}
+	.overlay_svg.open {
+		opacity: 1;
+		visibility: visible;
+	}
 
 
 
@@ -175,5 +214,100 @@ body{
 			-webkit-transition-delay: 0.3s;
 			transition-delay: 0.3s;
 		}
+
+
+/* 左侧推入推出 */
+.overlay_waitPushRight .buttonList{
+	-webkit-transform: translateX(0%);
+	transform: translateX(0%);
+	
+	-webkit-transition: -webkit-transform 0.5S;
+	transition: transform 0.5S;
+}
+	.overlay_waitPushRight .buttonList:after{
+		background-color: black;
+		content: "";
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		
+		-webkit-transition: opacity 0.5S;
+		transition: opacity 0.5S;
+	}
+	.overlay_waitPushRight.overlay_pushRight .buttonList{
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+		.overlay_waitPushRight.overlay_pushRight .buttonList:after{
+			opacity: 0.5;
+		}
+.overlay_waitPushRight .overlay_visibility{
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+	
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5S, visibility 0s 0.5s;
+	transition: opacity 0.5s, transform 0.5S, visibility 0s 0.5s;
+}
+	.overlay_waitPushRight.overlay_pushRight .overlay_visibility.open{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+		
+		-webkit-transition: opacity 0.5s, -webkit-transform 0.5S;
+		transition: opacity 0.5s, transform 0.5S;
+	}
+
+
+/* 缩小并从下侧推入，放大并从下侧推出 */
+.overlay_waitPushTop .buttonList{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	
+	-webkit-transition: -webkit-transform 0.5S;
+	transition: transform 0.5S;
+}
+	.overlay_waitPushTop.overlay_pushTop .buttonList{
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+.overlay_waitPushTop .overlay_visibility{
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5S, visibility 0s 0.5s;
+	transition: opacity 0.5s, transform 0.5S, visibility 0s 0.5s;
+}
+	.overlay_waitPushTop.overlay_pushTop .overlay_visibility.open{
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		
+		-webkit-transition: opacity 0.5s, -webkit-transform 0.5S;
+		transition: opacity 0.5s, transform 0.5S;
+	}
+
+
+/* 右上角翻页 */
+.overlay_svg{
+
+}
+	.overlay_svg path{
+		fill: rgba(153,204,51,0.9);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -6,12 +6,17 @@
     <link rel="stylesheet" href="fullScreen.css">
 </head>
 <body>
-    <button class="jQueryFadeIn">JQuery淡入</button>
-    <button class="jQuerySlideDown">JQuery滑动</button>
-    <button class="scrollDown">从上往下滚动</button>
-    <button class="scrollLeftTop">从右下往左上滚动</button>
-    <button class="scrollScale">放大</button>
-    <button class="scrollDoor">横向打开</button>
+    <div class="buttonList">
+        <button class="jQueryFadeIn">JQuery淡入</button>
+        <button class="jQuerySlideDown">JQuery滑动</button>
+        <button class="scrollDown">上下滚动</button>
+        <button class="scrollLeftTop">右下到左上滚动</button>
+        <button class="scrollScale">放大</button>
+        <button class="scrollDoor">横向打开</button>
+        <button class="pushRight">左右推动</button>
+        <button class="pushTop">缩小主页纵向推入</button>
+        <button class="pageTurning">右上角翻页</button>
+    </div>
 
     <!-- 全屏 展示隐藏 -->
     <div class="overlay overlay_hide">
@@ -27,6 +32,23 @@
         </nav>
     </div>
     <div class="overlay overlay_visibility">
+        <button class="overlay_close">Close</button>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="overlay overlay_svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1440 806" preserveAspectRatio="none">
+            <path class="overlay-path" d="m 0,0 1439.999975,0 0,805.99999 -1439.999975,0 z"></path>
+            <!--<path class="overlay-path" d="M0,0C0,0,1439.999975,0,1439.999975,0C1439.999975,0,1439.999975,805.99999,1439.999975,805.99999C1439.999975,805.99999,0,805.99999,0,805.99999C0,805.99999,0,0,0,0"></path>-->
+            <desc>Created with Snap</desc><defs></defs>
+        </svg>
         <button class="overlay_close">Close</button>
         <nav>
             <ul>
