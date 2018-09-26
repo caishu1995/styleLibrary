@@ -1,0 +1,126 @@
+html, body{
+	height: 100%;
+	margin: 0;
+	width: 100%;
+}
+.table{
+	border: 1px solid #c5c5c5;
+	float: left;
+	width: calc(100% - 2px);
+}
+	.table .thead{
+		float: left;
+		height: 20px;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+		.table .thead li{
+			border-right: 1px solid #c5c5c5;
+			float: left;
+			height: 20px;
+			padding: 0 20px;
+		}
+			.table .thead li:nth-child(1){
+				width: 58px;
+			}
+			.table .thead li:nth-child(2){
+				width: 108px;
+			}
+			.table .thead li:nth-child(3){
+				width: 508px;
+			}
+			.table .thead li:nth-child(4){
+				width: calc(100% - 838px);
+			}
+	
+	.table .tbody {
+		float: left;
+		width: 100%;
+	}
+		.table .tbody .allRow{
+			border-top: 1px solid #C5C5C5;
+			float: left;
+			width: 100%;
+		}
+			.table .tbody .allRow:first-child .ttShow input{
+				width: 100%;
+			}
+		.table .tbody .ppShow{
+			float: left;
+			width: 98px;
+		}
+		.table .tbody .ppOtherShow{
+			border-left: 1px solid #c5c5c5;
+			float: left;
+			width: calc(100% - 99px);
+		}
+			.table .tbody .ppOtherShow .ttShow{
+				float: left;
+				min-height: 20px;
+				width: 100%;
+			}
+				.table .tbody .ppOtherShow .ttShow input{
+					border: 0;
+					float: left;
+					outline: none;
+					text-overflow: ellipsis;
+					width: 697px;
+				}
+			.table .tbody .ppOtherShow .ttOtherShow{
+				float: left;
+				width: 100%;
+			}
+				.table .tbody .ppOtherShow .ttOtherShow .row{
+					float: left;
+					width: 100%;
+				}
+					.table .tbody .ppOtherShow .ttOtherShow .row .uuShow{
+						border-top: 1px solid #c5c5c5;
+						float: left;
+						width: 148px;
+					}
+					.table .tbody .ppOtherShow .ttOtherShow .row .uuOtherShow{
+						border-left: 1px solid #c5c5c5;
+						float: left;
+						width: calc(100% - 149px);
+					}
+						.table .tbody .ppOtherShow .ttOtherShow .row .uuOtherShow .content{
+							float: left;
+							width: 100%;
+						}
+							.table .tbody .ppOtherShow .ttOtherShow .row .uuOtherShow .ddShow{
+								border-top: 1px solid #c5c5c5;
+								float: left;
+								width: 99px;
+							}
+							.table .tbody .ppOtherShow .ttOtherShow .row .uuOtherShow .ddOtherShow{
+								border-left: 1px solid #c5c5c5;
+								float: left;
+								width: calc(100% - 100px);
+							}
+								.table .tbody .ppOtherShow .ttOtherShow .row .uuOtherShow .ddOtherShow ul{
+									border-top: 1px solid #c5c5c5;
+									float: left;
+									list-style: none;
+									margin: 0;
+									padding: 0;
+									width: 100%;
+								}
+									.table .tbody .ppOtherShow .ttOtherShow .row .uuOtherShow .ddOtherShow ul li{
+										border-right: 1px solid #c5c5c5;
+										float: left;
+									}
+										.table .tbody .ppOtherShow .ttOtherShow .row .uuOtherShow .ddOtherShow ul li:nth-child(1){
+											width: 349px;
+										}
+										.table .tbody .ppOtherShow .ttOtherShow .row .uuOtherShow .ddOtherShow ul li:nth-child(2){
+											width: 99px;
+										}
+	
+	.table .tfoot{
+		border-top: 1px solid #c5c5c5;
+		float: left;
+		width: 100%;
+	}
