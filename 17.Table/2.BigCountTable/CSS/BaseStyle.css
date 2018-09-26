@@ -1,0 +1,112 @@
+﻿.tableDiv {
+    border: 1px solid #c5c5c5;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+    .tableDiv ul {
+        height: 35px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+        .tableDiv ul li {
+            border-right: 1px solid #c5c5c5;
+            float: left;
+            font-size: 14px;
+            height: 26px;
+            overflow: hidden;
+            padding: 5px 10px 4px 10px;
+            line-height: 20px;
+        }
+        .tableDiv ul li input {
+            background-color: inherit;
+            border: none;
+            float: left;
+	        height: 24px;
+            width: calc(100% - 2px);
+        }
+
+    .tableDiv .gridTitle {
+        border-bottom: 1px solid #c5c5c5;
+        float: left;
+        height: 34px;
+        overflow: hidden;
+        width: 100%;
+    }
+        .tableDiv .gridTitle ul li {
+            background-color: #eae8e8;
+            background-image: none, -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
+            background-image: none, -webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            background-image: none, linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+        }
+        .tableDiv .gridTitle .HeaderLeft {
+            float:left;
+            height: 51px; /*包含横向滚动条*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: calc(100% - 18px);
+        }
+        .tableDiv .gridTitle .HeaderRight {
+            background-color: #eae8e8;
+            background-image: none, -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
+            background-image: none, -webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            background-image: none, linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            border-bottom: 1px solid #c5c5c5;
+            border-left: 1px solid #c5c5c5;
+            float:right;
+            height: 34px;
+            padding: 0;
+            width: 17px;
+        }
+
+    .tableDiv .gridBody {
+        float: left;
+        height: calc(100% - 64px);
+        width: 100%;
+    }
+        .tableDiv .gridBody ul:hover li{
+            background-color: #ecfbe2;
+        }
+        .tableDiv .gridBody .gridBodyLeft {
+            float: left;
+            height: 100%;
+            overflow-y: hidden;
+            width: calc(100% - 17px);
+        }
+        .tableDiv .gridBody .scrollBarRowDiv {
+            float: left;
+            height: 100%;
+            overflow-y: scroll;
+            width: 17px;
+        }
+			.tableDiv .gridBody .scrollBarRowDiv div{
+				width: 1px;
+			}
+        /*单双行颜色*/
+        .tableDiv .gridBody ul:nth-child(odd) {
+            background-color: white;
+        }
+        .tableDiv .gridBody ul:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+
+    .tableDiv .gridFoot {
+        background-color: #eae8e8;
+        background-image: none, -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
+        background-image: none, -webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+        background-image: none, linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+        border-top: 1px solid #c5c5c5;
+        height: 28px;
+        float: left;
+        width: 100%;
+    }
+        .tableDiv .gridFoot div {
+            float: right;
+            padding: 2px 20px;
+        }
+
+.selectRow li {
+    background-color: #d9edf8;
+}

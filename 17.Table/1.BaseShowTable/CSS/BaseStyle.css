@@ -1,0 +1,173 @@
+﻿.tableDiv {
+    border: 1px solid #c5c5c5;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+    .tableDiv ul {
+        height: 29px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+        .tableDiv ul li {
+            border: 1px solid #c5c5c5;
+            float: left;
+            font-size: 14px;
+            height: 19px;
+            overflow: hidden;
+            padding: 5px 10px 4px 10px;
+            line-height: 20px;
+        }
+        .tableDiv ul li input {
+            border: 1px solid #c5c5c5;
+            border-radius: 3px;
+            float: left;
+            width: calc(100% - 2px);
+        }
+        .tableDiv ul li label{
+            float: left;
+            width: 100%;
+        }
+
+    .tableDiv .gridTitle {
+        float: left;
+        height: 29px;
+        overflow: hidden;
+        width: 100%;
+    }
+        .tableDiv .gridTitle ul li {
+            background-color: #eae8e8;
+            background-image: none, -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
+            background-image: none, -webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            background-image: none, linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            border-top: 0;
+            border-left: 0;
+        }
+        .tableDiv .gridTitle .HeaderLeft {
+            float:left;
+            height: 45.5px; /*包含横向滚动条*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: calc(100% - 18px);
+        }
+        .tableDiv .gridTitle .HeaderRight {
+            background-color: #eae8e8;
+            background-image: none, -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
+            background-image: none, -webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            background-image: none, linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            border-bottom: 1px solid #c5c5c5;
+            border-left: 1px solid #c5c5c5;
+            float:right;
+            height: 28px;
+            padding: 0;
+            width: 17px;
+        }
+
+    .tableDiv .gridBody {
+        height: calc(100% - 59px);
+        overflow-y: scroll;
+        width: 100%;
+    }
+        .tableDiv .gridBody ul:hover li{
+            background-color: rgba(0, 0, 0, 0.15);
+        }
+        .tableDiv .gridBody ul li {
+            border-top: 0;
+            border-left: 0;
+        }
+        /*单双行颜色*/
+        .tableDiv .gridBody ul:nth-child(odd) {
+            background-color: white;
+        }
+        .tableDiv .gridBody ul:nth-child(even) {
+            background-color: #fafafa;
+        }
+        /*用于展示时，隐藏输入框*/
+        .tableDiv .gridBody .showRow li .writeInput {
+            display: none;
+        }
+        .tableDiv .gridBody .showRow li label {
+            display: block;
+        }
+        /*用于输入时，隐藏展示区域*/
+        .tableDiv .gridBody .writeRow li .writeInput {
+            display: block;
+        }
+        .tableDiv .gridBody .writeRow li label {
+            display: none;
+        }
+
+    .tableDiv .gridFoot {
+        background-color: #eae8e8;
+        background-image: none, -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
+        background-image: none, -webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+        background-image: none, linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+        border-top: 1px solid #c5c5c5;
+        height: 29px;
+        float: left;
+        width: 100%;
+    }
+        .tableDiv .gridFoot .gridFootLeft {
+            height: 29px;
+            float: left;
+            margin-left: 3px;
+            padding: 0;
+            width: calc(100% - 183px);
+        }
+            .tableDiv .gridFoot .gridFootLeft ul li {
+                border-radius: 20px;
+                margin: 1px 3px;
+                padding: 2px 8px;
+                width: 10px;
+            }
+                .tableDiv .gridFoot .gridFootLeft ul li:nth-child(1) {
+                    font-size: 10px;
+                }
+                .tableDiv .gridFoot .gridFootLeft ul li:nth-child(2) {
+                    border-radius: 10px;
+                    width: 36px;
+                }
+                    .tableDiv .gridFoot .gridFootLeft ul li:nth-child(2) input {
+                        background-color: inherit;
+                        border: 0;
+                        width: 100%;
+                    }
+                .tableDiv .gridFoot .gridFootLeft ul li:nth-child(3) {
+                    border: 0px;
+                    padding-left: 0;
+                    padding-right: 0;
+                    width: 57px;
+                }
+					.tableDiv .gridFoot .gridFootLeft ul li:nth-child(3) label{
+						float: initial;
+						width: calc(100% - 18px);
+					}
+                .tableDiv .gridFoot .gridFootLeft ul li:nth-child(4) {
+                    font-size: 10px;
+                    padding: 2px 6px 2px 10px;
+                }
+        .tableDiv .gridFoot .gridFootRight {
+            float: right;
+            margin: 5px 10px;
+            text-align: right;
+            width: 160px;
+        }
+
+    .tableDiv .gridUlMenu {
+        display: none;
+        position: absolute;
+        width: 50px;
+        z-index: 100;
+    }
+        .tableDiv .gridUlMenu li {
+            height: 21px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+            .tableDiv .gridUlMenu li button {
+                margin: 0;
+                width: 100%;
+            }

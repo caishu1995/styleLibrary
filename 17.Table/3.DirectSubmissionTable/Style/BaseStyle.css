@@ -1,0 +1,205 @@
+﻿button {
+    background-color: white;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    color: #525050;
+}
+    button:hover {
+        background-color: rgb(221, 221, 221);
+    }
+    button:focus {
+        outline-color: #a8c4ae;
+    }
+    button img{
+        float: left;
+        width: 16px;
+    }
+input {
+    border: 1px solid #c5c5c5;
+    border-radius: 3px;
+    background-color: transparent;
+    float: left;
+    height: 100%;
+    padding: 0 3px;
+    width: calc(100% - 2px);
+}
+
+.tableDiv {
+    border: 1px solid #c5c5c5;
+    margin: 5px 2.5%;
+    padding: 0;
+    width: 100%;
+}
+    .tableDiv ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+        .tableDiv ul li {
+            border: 1px solid #c5c5c5;
+            float: left;
+            font-size: 14px;
+            height: calc(100% - 10px);
+            list-style-type: none;
+            line-height: 20px;
+            overflow: hidden;
+            padding: 5px 10px 4px 10px;
+        }
+            .tableDiv ul li .readInput {
+                border: 0;
+                border-bottom: 1px solid #c5c5c5;
+            }
+    /*删除、取消、保存、修改按钮*/
+    .tableDiv .deleteButton, .tableDiv .gridBody .saveButton, .tableDiv .gridBody .updateButton, .tableDiv .gridBody .cancelButton {
+        float: left;
+        height: 100%;
+        margin: 0 5px;
+        width: 82px;
+    }
+    .tableDiv .deleteButton:focus {
+        background-color: #ffeaea;
+    }
+    .tableDiv .saveButton:focus {
+        background-color: #a8c4ae;
+    }
+    .tableDiv .updateButton:focus {
+        background-color: #faf4d0;
+    }
+    .tableDiv .writeInput:focus {
+        outline-color: #525050;
+    }
+
+    .tableDiv .gridTitle {
+        float: left;
+        overflow: hidden;
+        width: 100%;
+    }
+        .tableDiv .gridTitle ul li {
+            background-color: #eae8e8;
+            background-image: none, -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
+            background-image: none, -webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            background-image: none, linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            border-top: 0;
+            border-left: 0;
+        }
+        .tableDiv .gridTitle .HeaderLeft {
+            float:left;
+            height: calc(100% + 16.5px); /*包含横向滚动条*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: calc(100% - 18px);
+        }
+            .tableDiv .gridTitle .HeaderLeft li:nth-child(1) {
+                width: 184px;
+            }
+        .tableDiv .gridTitle .HeaderRight {
+            background-color: #eae8e8;
+            background-image: none, -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
+            background-image: none, -webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            background-image: none, linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            border-bottom: 1px solid #c5c5c5;
+            border-left: 1px solid #c5c5c5;
+            float:right;
+            height: calc(100% - 1px);
+            padding: 0;
+            width: 17px;
+        }
+
+    .tableDiv .gridBody {
+        height: calc(100% - 29px);
+        overflow-y: scroll;
+        width: 100%;
+    }
+        .tableDiv .gridBody ul:hover li{
+            background-color: #d0d0d0;
+        }
+        .tableDiv .gridBody ul li {
+            border-bottom: 0;
+            border-left: 0;
+            border-top: 0;
+        }
+        .tableDiv .gridBody ul li:nth-child(1) {
+            width: 184px;
+        }
+        /*单双行颜色*/
+        .tableDiv .gridBody ul:nth-child(odd) {
+            background-color: white;
+        }
+        .tableDiv .gridBody ul:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+        /*正常状态样式*/
+        .tableDiv .gridBody .normalRow li .writeInput, .tableDiv .gridBody .normalRow li .saveButton , .tableDiv .gridBody .normalRow li .cancelButton {
+            display: none;
+        }
+        .tableDiv .gridBody .normalRow li .readInput, .tableDiv .gridBody .normalRow li .updateButton, .tableDiv .gridBody .normalRow li .deleteButton {
+            display: block;
+        }
+        /*正在输入状态样式*/
+        .tableDiv .gridBody .writingRow li .writeInput, .tableDiv .gridBody .writingRow li .saveButton, .tableDiv .gridBody .writingRow li .cancelButton{
+            display: block;
+        }
+        .tableDiv .gridBody .writingRow li .readInput, .tableDiv .gridBody .writingRow li .updateButton, .tableDiv .gridBody .writingRow li .deleteButton {
+            display: none;
+        }
+        /*新增按钮行*/
+        .tableDiv .gridBody .addButtonRow li:nth-child(1){
+            border-bottom: 1px solid #c5c5c5;
+            border-top: 1px solid #c5c5c5;
+            height: calc(100% - 10px);
+            padding: 4px 15px;
+            width: calc(100% - 31px) !important;
+        }
+            .tableDiv .gridBody .addButtonRow li button {
+                height: 100%;
+                width: 82px;
+            }
+
+    .tableDiv .gridUlMenu {
+        display: none;
+        position: absolute;
+        width: 70px;
+        z-index: 100;
+    }
+        .tableDiv .gridUlMenu li {
+            border: 0;
+            height: 25px;
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+            .tableDiv .gridUlMenu li button {
+                height: 100%;
+                margin: 0;
+                width: 100%;
+            }
+        /*正常状态样式*/
+        .tableDiv .normal, .tableDiv .normal .deleteButton, .tableDiv .normal .updateButton{
+            display: block;
+        }
+        .tableDiv .normal .saveButton, .tableDiv .normal .cancelButton {
+            display: none;
+        }
+        /*正在修改中状态样式*/
+        .tableDiv .writing, .tableDiv .writing .saveButton, .tableDiv .writing .cancelButton {
+            display: block;
+        }
+        .tableDiv .writing .updateButton, .tableDiv .writing .deleteButton {
+            display: none;
+        }
+
+/*大版*/
+.bigType .tableDiv ul, .bigType .tableDiv .gridTitle, .bigType .saveDiv  {
+    height: 35px;
+}
+.bigType .tableDiv, .bigType .tableDiv .gridBody {
+    height: calc(100% - 35px);
+}
+/*小版*/
+.smallType .tableDiv ul, .smallType .tableDiv .gridTitle, .smallType .saveDiv  {
+    height: 29px;
+}
+.smallType .tableDiv, .smallType .tableDiv .gridBody {
+    height: calc(100% - 29px);
+}
