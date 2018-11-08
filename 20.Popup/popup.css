@@ -1,0 +1,112 @@
+html{
+	height: 100%;
+	width: 100%;
+}
+body{
+	background: #dddddd;
+	float: left;
+	height: 100%;
+	line-height: 1.25;
+	margin: 0;
+	overflow: hidden;
+	width: 100%;
+}
+.buttonList{
+	background: white;
+	height: 50%;
+	padding: 8px;
+	width: calc(100% - 16px);
+}
+	.buttonList button{
+		background: white;
+		border: 1px solid #777777;
+		border-radius: 10px;
+		color: #777777;
+		font-size: 18px;
+		font-weight: bold;
+		margin: 10px 8px;
+		outline: none;
+		padding: 8px 20px;
+	}
+		.buttonList button:hover{
+			background: #777777;
+			color: white;
+		}
+
+
+/* 基础遮罩层样式 */
+.overlay {
+	background: rgba(109, 117, 8, 0.5);
+	height: 315px;
+	left: 0;
+	opacity: 0;
+	padding: calc(50vh - 157.5px) calc(50vw - 300px);
+	position: fixed;
+	top: 0;
+	visibility: hidden;
+	width: 600px;
+	
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+	.overlay.open {
+		opacity: 1;
+		visibility: visible;
+		
+		-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+		transition: opacity 0.5s, visibility 0s 0.5s;
+	}
+	.overlay .overlay_Div{}
+	.overlay .overlay_top {
+		background: rgba(153,204, 51, 0.7);
+		color: white;
+		float: left;
+		font-size: 30px;
+		text-align: center;
+		padding: 20px 0;
+		width: 100%;
+	}
+	.overlay .overlay_content {
+		background: #6d7508;
+		color: white;
+		float: left;
+		font-size: 16px;
+		width: 100%;
+	}
+		.overlay .overlay_content span {
+			float: left;
+			padding: 20px 25px;
+			width: calc(100% - 50px);
+		}
+			.overlay .overlay_content span p {
+				float: left;
+				margin: 3px 0;
+			}
+		.overlay .overlay_content button {
+			background: rgba(153,204, 51, 0.7);
+			border: 1px solid rgba(153,204, 51, 0.7);
+			color: white;
+			float: left;
+			font-size: 16px;
+			margin-left: calc(50% - 60px);
+			margin-bottom: 20px;
+			padding: 7px 15px;
+			width: 120px;
+		}
+
+
+
+
+/* 放大展示，缩小隐藏 */
+.overlay_scale {}
+	.overlay .overlay_Div{
+		/*-webkit-transform: scale(0.7);*/
+		/*transform: scale(0.7);*/
+		
+		/*-webkit-transition: -webkit-transform 0.5S;*/
+		/*transition: transform 0.5S;*/
+	}
+		.overlay .overlay_Div.open {
+			/*-webkit-transform: scale(1);*/
+			/*transform: scale(1);*/
+		}
