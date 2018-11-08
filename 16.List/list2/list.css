@@ -1,14 +1,15 @@
-body{
-	position: relative;
-}
-.rightKeyBase{
+*{ float: left; }
+.part{ margin: 30px; }
+
+/* 鼠标移入展示 */
+.list1{
 	background-color: #494a5f;
 	border-radius: 150px;
 	height: 250px;
-	position: absolute;
+	position: relative;
 	width: 250px;
 }
-	.rightKeyBase .rightKeyCenter{
+	.list1 .listCenter{
 		background-color: white;
 		border-radius: 50px;
 		cursor: pointer;
@@ -18,10 +19,10 @@ body{
 		top: 75px;
 		width: 100px;
 	}
-		.rightKeyBase:hover .rightKeyCenter{
+		.list1:hover .listCenter{
 			background-color: #d1d2d7;
 		}
-		.rightKeyBase .rightKeyCenter span{
+		.list1 .listCenter span{
 			color: #99b977;
 			cursor: pointer;
 			font-size: 30px;
@@ -32,12 +33,13 @@ body{
 			top: 27px;
 			width: 100%;
 		}
-	.rightKeyBase .rightKeyMenu {
+	.list1 .listMenu {
 		list-style: none;
 		margin: 125px;
+		padding: 0;
 		position: relative;
 	}
-		.rightKeyBase .rightKeyMenu li{
+		.list1 .listMenu li{
 			background-color: white;
 			border-radius: 25px;
 			cursor: pointer;
@@ -64,10 +66,10 @@ body{
 			-o-transition: -o-transform linear .2s, opacity linear .2s;      /* Opera */
 			transition: transform linear .2s, opacity linear .2s;
 		}
-			.rightKeyBase:hover .rightKeyMenu li{
+			.list1:hover .listMenu li{
 				opacity: 1;
 			}
-			.rightKeyBase .rightKeyMenu li a{
+			.list1 .listMenu li a{
 				color: #99b977;
 				float: left;
 				font-size: 20px;
@@ -77,7 +79,7 @@ body{
 				text-decoration: none;
 				width: 100%;
 			}
-			.rightKeyBase:hover .rightKeyMenu li:nth-child(1){
+			.list1:hover .listMenu li:nth-child(1){
 				-ms-transform: scale(1) rotate(0deg); 	  /* IE 9 */
 				-moz-transform: scale(1) rotate(0deg); 	  /* Firefox */
 				-webkit-transform: scale(1) rotate(0deg); /* Safari 和 Chrome */
@@ -85,7 +87,7 @@ body{
 				transform: scale(1) rotate(0deg); 	  /* Opera */
 				
 			}
-			.rightKeyBase:hover .rightKeyMenu li:nth-child(2){
+			.list1:hover .listMenu li:nth-child(2){
 				-ms-transform: scale(1) rotate(36deg); 	  /* IE 9 */
 				-moz-transform: scale(1) rotate(36deg); 	  /* Firefox */
 				-webkit-transform: scale(1) rotate(36deg); /* Safari 和 Chrome */
@@ -97,7 +99,7 @@ body{
 				-o-transition-delay: .02s;      /* Opera */
 				transition-delay: .02s;
 			}
-			.rightKeyBase:hover .rightKeyMenu li:nth-child(3){
+			.list1:hover .listMenu li:nth-child(3){
 				-ms-transform: scale(1) rotate(72deg); 	  /* IE 9 */
 				-moz-transform: scale(1) rotate(72deg); 	  /* Firefox */
 				-webkit-transform: scale(1) rotate(72deg); /* Safari 和 Chrome */
@@ -109,7 +111,7 @@ body{
 				-o-transition-delay: .04s;      /* Opera */
 				transition-delay: .04s;
 			}
-			.rightKeyBase:hover .rightKeyMenu li:nth-child(4){
+			.list1:hover .listMenu li:nth-child(4){
 				-ms-transform: scale(1) rotate(108deg); 	  /* IE 9 */
 				-moz-transform: scale(1) rotate(108deg); 	  /* Firefox */
 				-webkit-transform: scale(1) rotate(108deg); /* Safari 和 Chrome */
@@ -121,7 +123,7 @@ body{
 				-o-transition-delay: .06s;      /* Opera */
 				transition-delay: .06s;
 			}
-			.rightKeyBase:hover .rightKeyMenu li:nth-child(5){
+			.list1:hover .listMenu li:nth-child(5){
 				-ms-transform: scale(1) rotate(144deg); 	  /* IE 9 */
 				-moz-transform: scale(1) rotate(144deg); 	  /* Firefox */
 				-webkit-transform: scale(1) rotate(144deg); /* Safari 和 Chrome */
@@ -134,7 +136,7 @@ body{
 				transition-delay: .08s;
 				
 			}
-			.rightKeyBase:hover .rightKeyMenu li:nth-child(6){
+			.list1:hover .listMenu li:nth-child(6){
 				-ms-transform: scale(1) rotate(180deg); 	  /* IE 9 */
 				-moz-transform: scale(1) rotate(180deg); 	  /* Firefox */
 				-webkit-transform: scale(1) rotate(180deg); /* Safari 和 Chrome */
@@ -147,7 +149,7 @@ body{
 				transition-delay: .1s;
 				
 			}
-			.rightKeyBase:hover .rightKeyMenu li:nth-child(7){
+			.list1:hover .listMenu li:nth-child(7){
 				-ms-transform: scale(1) rotate(216deg); 	  /* IE 9 */
 				-moz-transform: scale(1) rotate(216deg); 	  /* Firefox */
 				-webkit-transform: scale(1) rotate(216deg); /* Safari 和 Chrome */
@@ -160,7 +162,7 @@ body{
 				transition-delay: .12s;
 				
 			}
-			.rightKeyBase:hover .rightKeyMenu li:nth-child(8){
+			.list1:hover .listMenu li:nth-child(8){
 				-ms-transform: scale(1) rotate(252deg); 	  /* IE 9 */
 				-moz-transform: scale(1) rotate(252deg); 	  /* Firefox */
 				-webkit-transform: scale(1) rotate(252deg); /* Safari 和 Chrome */
@@ -173,7 +175,7 @@ body{
 				transition-delay: .14s;
 				
 			}
-			.rightKeyBase:hover .rightKeyMenu li:nth-child(9){
+			.list1:hover .listMenu li:nth-child(9){
 				-ms-transform: scale(1) rotate(288deg); 	  /* IE 9 */
 				-moz-transform: scale(1) rotate(288deg); 	  /* Firefox */
 				-webkit-transform: scale(1) rotate(288deg); /* Safari 和 Chrome */
@@ -185,7 +187,7 @@ body{
 				-o-transition-delay: .16s;      /* Opera */
 				transition-delay: .16s;
 			}
-			.rightKeyBase:hover .rightKeyMenu li:nth-child(10){
+			.list1:hover .listMenu li:nth-child(10){
 				-ms-transform: scale(1) rotate(324deg); 	  /* IE 9 */
 				-moz-transform: scale(1) rotate(324deg); 	  /* Firefox */
 				-webkit-transform: scale(1) rotate(324deg); /* Safari 和 Chrome */
@@ -196,4 +198,331 @@ body{
 				-webkit-transition-delay: .18s; /* Safari 和 Chrome */
 				-o-transition-delay: .18s;      /* Opera */
 				transition-delay: .18s;
+			}
+
+
+/* 点击展示，点击隐藏 */
+.list2{
+	background-color: #494a5f;
+	border-radius: 150px;
+	height: 250px;
+	position: relative;
+	width: 250px;
+}
+	.list2 .listCenter{
+		background-color: white;
+		border-radius: 50px;
+		cursor: pointer;
+		height: 100px;
+		left: 75px;
+		position: absolute;
+		top: 75px;
+		width: 100px;
+	}
+		.list2.show .listCenter{
+			background-color: #d1d2d7;
+		}
+		.list2 .listCenter span{
+			color: #99b977;
+			cursor: pointer;
+			font-size: 30px;
+			font-weight: bolder;
+			left: 0;
+			position: absolute;
+			text-align: center;
+			top: 27px;
+			width: 100%;
+		}
+	.list2 .listMenu {
+		list-style: none;
+		margin: 125px;
+		padding: 0;
+		position: relative;
+		
+		-ms-transform-origin: 0 0; 		/* IE 9 */
+		-webkit-transform-origin: 0 0;	/* Safari 和 Chrome */
+		-moz-transform-origin: 0 0;		/* Firefox */
+		-o-transform-origin: 0 0;		/* Opera */
+		
+		-ms-transform: scale(0) rotate(-360deg); 	  /* IE 9 */
+		-moz-transform: scale(0) rotate(-360deg); 	  /* Firefox */
+		-webkit-transform: scale(0) rotate(-360deg); /* Safari 和 Chrome */
+		-o-transform: scale(0) rotate(-360deg); 	  /* Opera */
+		transform: scale(0) rotate(-360deg);
+		
+		-moz-transition: -moz-transform linear .5s;    /* Firefox 4 */
+		-webkit-transition: -webkit-transform linear .5s; /* Safari 和 Chrome */
+		-o-transition: -o-transform linear .5s;      /* Opera */
+		transition: transform linear .5s;
+	}
+		.list2.show .listMenu{
+			-ms-transform: scale(1) rotate(0deg); 	  /* IE 9 */
+			-moz-transform: scale(1) rotate(0deg); 	  /* Firefox */
+			-webkit-transform: scale(1) rotate(0deg); /* Safari 和 Chrome */
+			-o-transform: scale(1) rotate(0deg); 	  /* Opera */
+			transform: scale(1) rotate(0deg);
+		}
+		.list2 .listMenu li{
+			background-color: white;
+			border-radius: 25px;
+			cursor: pointer;
+			height: 50px;
+			left: -25px;
+			position: absolute;
+			top: -120px;
+			width: 50px;
+			
+			-ms-transform-origin: 25px 120px; 		/* IE 9 */
+			-webkit-transform-origin: 25px 120px;	/* Safari 和 Chrome */
+			-moz-transform-origin: 25px 120px;		/* Firefox */
+			-o-transform-origin: 25px 120px;		/* Opera */
+			
+			-ms-transform:  rotate(0deg); 	  /* IE 9 */
+			-moz-transform: rotate(0deg); 	  /* Firefox */
+			-webkit-transform: rotate(0deg); /* Safari 和 Chrome */
+			-o-transform: rotate(0deg); 	  /* Opera */
+			transform: rotate(0deg);
+		}
+			.list2 .listMenu li a{
+				color: #99b977;
+				float: left;
+				font-size: 20px;
+				line-height: 20px;
+				margin: 15px 0;
+				text-align: center;
+				text-decoration: none;
+				width: 100%;
+			}
+			.list2 .listMenu li:nth-child(1){
+				-ms-transform: rotate(0deg); 	  /* IE 9 */
+				-moz-transform: rotate(0deg); 	  /* Firefox */
+				-webkit-transform: rotate(0deg); /* Safari 和 Chrome */
+				-o-transform: rotate(0deg); 	  /* Opera */
+				transform: rotate(0deg); 	  /* Opera */
+				
+			}
+			.list2 .listMenu li:nth-child(2){
+				-ms-transform: rotate(36deg); 	  /* IE 9 */
+				-moz-transform: rotate(36deg); 	  /* Firefox */
+				-webkit-transform: rotate(36deg); /* Safari 和 Chrome */
+				-o-transform: rotate(36deg); 	  /* Opera */
+				transform: rotate(36deg);
+			}
+			.list2 .listMenu li:nth-child(3){
+				-ms-transform: rotate(72deg); 	  /* IE 9 */
+				-moz-transform: rotate(72deg); 	  /* Firefox */
+				-webkit-transform: rotate(72deg); /* Safari 和 Chrome */
+				-o-transform: rotate(72deg); 	  /* Opera */
+				transform: rotate(72deg);
+			}
+			.list2 .listMenu li:nth-child(4){
+				-ms-transform: rotate(108deg); 	  /* IE 9 */
+				-moz-transform: rotate(108deg); 	  /* Firefox */
+				-webkit-transform: rotate(108deg); /* Safari 和 Chrome */
+				-o-transform: rotate(108deg); 	  /* Opera */
+				transform: rotate(108deg);
+			}
+			.list2 .listMenu li:nth-child(5){
+				-ms-transform: rotate(144deg); 	  /* IE 9 */
+				-moz-transform: rotate(144deg); 	  /* Firefox */
+				-webkit-transform: rotate(144deg); /* Safari 和 Chrome */
+				-o-transform: rotate(144deg); 	  /* Opera */
+				transform: rotate(144deg);
+			}
+			.list2 .listMenu li:nth-child(6){
+				-ms-transform: rotate(180deg); 	  /* IE 9 */
+				-moz-transform: rotate(180deg); 	  /* Firefox */
+				-webkit-transform: rotate(180deg); /* Safari 和 Chrome */
+				-o-transform: rotate(180deg); 	  /* Opera */
+				transform: rotate(180deg);
+			}
+			.list2 .listMenu li:nth-child(7){
+				-ms-transform: rotate(216deg); 	  /* IE 9 */
+				-moz-transform: rotate(216deg); 	  /* Firefox */
+				-webkit-transform: rotate(216deg); /* Safari 和 Chrome */
+				-o-transform: rotate(216deg); 	  /* Opera */
+				transform: rotate(216deg);
+			}
+			.list2 .listMenu li:nth-child(8){
+				-ms-transform: rotate(252deg); 	  /* IE 9 */
+				-moz-transform: rotate(252deg); 	  /* Firefox */
+				-webkit-transform: rotate(252deg); /* Safari 和 Chrome */
+				-o-transform: rotate(252deg); 	  /* Opera */
+				transform: rotate(252deg);
+			}
+			.list2 .listMenu li:nth-child(9){
+				-ms-transform: rotate(288deg); 	  /* IE 9 */
+				-moz-transform: rotate(288deg); 	  /* Firefox */
+				-webkit-transform: rotate(288deg); /* Safari 和 Chrome */
+				-o-transform: rotate(288deg); 	  /* Opera */
+				transform: rotate(288deg);
+			}
+			.list2 .listMenu li:nth-child(10){
+				-ms-transform: rotate(324deg); 	  /* IE 9 */
+				-moz-transform: rotate(324deg); 	  /* Firefox */
+				-webkit-transform: rotate(324deg); /* Safari 和 Chrome */
+				-o-transform: rotate(324deg); 	  /* Opera */
+				transform: rotate(324deg);
+			}
+
+
+
+/* 点击展示，点击隐藏 */
+.list3{
+	background-color: #494a5f;
+	border-radius: 150px;
+	height: 250px;
+	position: relative;
+	width: 250px;
+}
+	.list3 .listCenter{
+		background-color: white;
+		border-radius: 50px;
+		cursor: pointer;
+		height: 100px;
+		left: 75px;
+		position: absolute;
+		top: 75px;
+		width: 100px;
+	}
+		.list3:hover .listCenter{
+			background-color: #d1d2d7;
+		}
+		.list3 .listCenter span{
+			color: #99b977;
+			cursor: pointer;
+			font-size: 30px;
+			font-weight: bolder;
+			left: 0;
+			position: absolute;
+			text-align: center;
+			top: 27px;
+			width: 100%;
+		}
+	.list3 .listMenu {
+		list-style: none;
+		margin: 125px;
+		padding: 0;
+		position: relative;
+		
+		-ms-transform-origin: 0 0; 		/* IE 9 */
+		-webkit-transform-origin: 0 0;	/* Safari 和 Chrome */
+		-moz-transform-origin: 0 0;		/* Firefox */
+		-o-transform-origin: 0 0;		/* Opera */
+		
+		-moz-transition: -moz-transform linear .5s;    /* Firefox 4 */
+		-webkit-transition: -webkit-transform linear .5s; /* Safari 和 Chrome */
+		-o-transition: -o-transform linear .5s;      /* Opera */
+		transition: transform linear .5s;
+	}
+		.list3.show .listMenu{
+			-ms-transform: scale(1) rotate(0deg); 	  /* IE 9 */
+			-moz-transform: scale(1) rotate(0deg); 	  /* Firefox */
+			-webkit-transform: scale(1) rotate(0deg); /* Safari 和 Chrome */
+			-o-transform: scale(1) rotate(0deg); 	  /* Opera */
+			transform: scale(1) rotate(0deg);
+		}
+		.list3 .listMenu li{
+			cursor: pointer;
+			height: 125px;
+			left: -125px;
+			overflow: hidden;
+			position: absolute;
+			top: -125px;
+			width: 125px;
+			
+			-ms-transform-origin: 100% 100%; 		/* IE 9 */
+			-webkit-transform-origin: 100% 100%;	/* Safari 和 Chrome */
+			-moz-transform-origin: 100% 100%;		/* Firefox */
+			-o-transform-origin: 100% 100%;		/* Opera */
+			
+			transform: rotate(75deg) skew(62deg);
+			
+		}
+			.list3 .listMenu li a{
+				background: radial-gradient(transparent 25%, #08c 75%);
+				border-radius: 250px;
+				color: #99b977;
+				float: left;
+				font-size: 50px;
+				height: 250px;
+				left: 0;
+				position: absolute;
+				text-align: center;
+				text-decoration: none;
+				top: 0;
+				width: 250px;
+				
+				transform: skew(-62deg) rotate(-75deg);
+			}
+			.list3 .listMenu li:nth-child(1){
+				-ms-transform: rotate(-90deg) skew(62deg); 	  /* IE 9 */
+				-moz-transform: rotate(-90deg) skew(62deg); 	  /* Firefox */
+				-webkit-transform: rotate(-90deg) skew(62deg); /* Safari 和 Chrome */
+				-o-transform: rotate(-90deg) skew(62deg); 	  /* Opera */
+				transform: rotate(-90deg) skew(62deg); 	      /* Opera */
+				
+			}
+			.list3 .listMenu li:nth-child(2){
+				-ms-transform: rotate(-54deg) skew(62deg); 	   /* IE 9 */
+				-moz-transform: rotate(-54deg) skew(62deg);    /* Firefox */
+				-webkit-transform: rotate(-54deg) skew(62deg); /* Safari 和 Chrome */
+				-o-transform: rotate(-54deg) skew(62deg); 	   /* Opera */
+				transform: rotate(-54deg) skew(62deg);
+			}
+			.list3 .listMenu li:nth-child(3){
+				-ms-transform: rotate(-18deg) skew(62deg); 	  /* IE 9 */
+				-moz-transform: rotate(-18deg) skew(62deg);   /* Firefox */
+				-webkit-transform: rotate(-18deg) skew(62deg);/* Safari 和 Chrome */
+				-o-transform: rotate(-18deg) skew(62deg); 	  /* Opera */
+				transform: rotate(-18deg) skew(62deg);
+			}
+			.list3 .listMenu li:nth-child(4){
+				-ms-transform: rotate(18deg) skew(62deg); 	  /* IE 9 */
+				-moz-transform: rotate(18deg) skew(62deg); 	  /* Firefox */
+				-webkit-transform: rotate(18deg) skew(62deg); /* Safari 和 Chrome */
+				-o-transform: rotate(18deg) skew(62deg); 	  /* Opera */
+				transform: rotate(18deg) skew(62deg);
+			}
+			.list3 .listMenu li:nth-child(5){
+				-ms-transform: rotate(54deg) skew(62deg); 	  /* IE 9 */
+				-moz-transform: rotate(54deg) skew(62deg); 	  /* Firefox */
+				-webkit-transform: rotate(54deg) skew(62deg); /* Safari 和 Chrome */
+				-o-transform: rotate(54deg) skew(62deg); 	  /* Opera */
+				transform: rotate(54deg) skew(62deg);
+			}
+			.list3 .listMenu li:nth-child(6){
+				-ms-transform: rotate(90deg) skew(62deg); 	  /* IE 9 */
+				-moz-transform: rotate(90deg) skew(62deg); 	  /* Firefox */
+				-webkit-transform: rotate(90deg) skew(62deg); /* Safari 和 Chrome */
+				-o-transform: rotate(90deg) skew(62deg); 	  /* Opera */
+				transform: rotate(90deg) skew(62deg);
+			}
+			.list3 .listMenu li:nth-child(7){
+				-ms-transform: rotate(126deg) skew(62deg); 	   /* IE 9 */
+				-moz-transform: rotate(126deg) skew(62deg);    /* Firefox */
+				-webkit-transform: rotate(126deg) skew(62deg); /* Safari 和 Chrome */
+				-o-transform: rotate(126deg) skew(62deg); 	   /* Opera */
+				transform: rotate(126deg) skew(62deg);
+			}
+			.list3 .listMenu li:nth-child(8){
+				-ms-transform: rotate(162deg) skew(62deg); 	   /* IE 9 */
+				-moz-transform: rotate(162deg) skew(62deg);    /* Firefox */
+				-webkit-transform: rotate(162deg) skew(62deg); /* Safari 和 Chrome */
+				-o-transform: rotate(162deg) skew(62deg); 	   /* Opera */
+				transform: rotate(162deg) skew(62deg);
+			}
+			.list3 .listMenu li:nth-child(9){
+				-ms-transform: rotate(198deg) skew(62deg); 	   /* IE 9 */
+				-moz-transform: rotate(198deg) skew(62deg);    /* Firefox */
+				-webkit-transform: rotate(198deg) skew(62deg); /* Safari 和 Chrome */
+				-o-transform: rotate(198deg) skew(62deg); 	   /* Opera */
+				transform: rotate(198deg) skew(62deg);
+			}
+			.list3 .listMenu li:nth-child(10){
+				-ms-transform: rotate(234deg) skew(62deg); 	   /* IE 9 */
+				-moz-transform: rotate(234deg) skew(62deg);    /* Firefox */
+				-webkit-transform: rotate(234deg) skew(62deg); /* Safari 和 Chrome */
+				-o-transform: rotate(234deg) skew(62deg); 	   /* Opera */
+				transform: rotate(234deg) skew(62deg);
 			}

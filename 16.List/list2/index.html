@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="list.css">
 </head>
 <body>
-    <div id="rightKeyPart" class="rightKeyBase">
-        <ul class="rightKeyMenu">
+    <div class="list1 part">
+        <ul class="listMenu">
             <li><a href="#" class="">Aa</a></li>
             <li><a href="#" class="">aa</a></li>
             <li><a href="#" class="">aa</a></li>
@@ -26,7 +26,44 @@
             <li><a href="#" class="">aa</a></li>
             <li><a href="#" class="">Aa</a></li>
         </ul>
-        <div class="rightKeyCenter"><span>close</span></div>
+        <div class="listCenter"><span>移入</span></div>
     </div>
+    <div class="list2 part">
+        <ul class="listMenu">
+            <li><a href="#" class="">Aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">Aa</a></li>
+        </ul>
+        <div class="listCenter"><span>点击</span></div>
+    </div>
+    <div class="list3 part">
+        <ul class="listMenu">
+            <li><a href="#" class="">Aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">aa</a></li>
+            <li><a href="#" class="">Aa</a></li>
+        </ul>
+        <div class="listCenter"><span>移入</span></div>
+    </div>
+
+    <script src="jquery-2.0.2.min.js"></script>
+    <script>
+        $(".list2 .listCenter").click(function() {
+            $(this).parent(".list2").toggleClass("show");
+        });
+    </script>
 </body>
 </html>
