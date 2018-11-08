@@ -8,12 +8,6 @@ body{
 	position: absolute;
 	width: 250px;
 }
-	.rightKeyBase.hasAnimate{
-		transition: opacity linear .2s;
-		-moz-transition: opacity linear .2s;    /* Firefox 4 */
-		-webkit-transition: opacity linear .2s; /* Safari 和 Chrome */
-		-o-transition: opacity linear .2s;      /* Opera */
-	}
 	.rightKeyBase .rightKeyCenter{
 		background-color: white;
 		border-radius: 50px;
