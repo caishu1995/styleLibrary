@@ -5,16 +5,16 @@ $(".scale").click(function() {
     setTimeout(function() {
         $(".overlay").addClass("open");
         $(".overlay_Div button").get(0).onclick = scaleFunction;
-    }, 300);
+    }, 500);
 });
 //滚出
 function scaleFunction() {
-    $(this).parents(".overlay_Div").addClass("close");
-    $(this).parents(".overlay_Div").removeClass("open");
+    $(this).parents(".overlay_scale").addClass("close");
+    $(this).parents(".overlay_scale").removeClass("open");
 
     setTimeout(function() {
-        $(".overlay_Div").removeClass("close");
-        $(".overlay_scroll1").removeClass("overlay_scroll1");
+        $(".overlay_scale").removeClass("close");
+        $(".overlay_scale").removeClass("overlay_scale");
     }, 500);
 }
 
