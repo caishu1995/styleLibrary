@@ -44,25 +44,32 @@
         <div class="listCenter"><span>点击</span></div>
     </div>
     <div class="list3 part">
-        <ul class="listMenu">
-            <li><a href="#" class="">Aa</a></li>
-            <li><a href="#" class="">aa</a></li>
-            <li><a href="#" class="">aa</a></li>
-            <li><a href="#" class="">aa</a></li>
-            <li><a href="#" class="">aa</a></li>
-            <li><a href="#" class="">aa</a></li>
-            <li><a href="#" class="">aa</a></li>
-            <li><a href="#" class="">aa</a></li>
-            <li><a href="#" class="">aa</a></li>
-            <li><a href="#" class="">Aa</a></li>
-        </ul>
-        <div class="listCenter"><span>移入</span></div>
+        <div class="listMenu">
+            <ul>
+                <li><a href="#" class=""><span>HTML5</span></a></li>
+                <li><a href="#" class=""><span>CSS3</span></a></li>
+                <li><a href="#" class=""><span>JAVASCRIPT</span></a></li>
+                <li><a href="#" class=""><span>JSON</span></a></li>
+                <li><a href="#" class=""><span>PHP</span></a></li>
+                <li><a href="#" class=""><span>JAVA</span></a></li>
+                <li><a href="#" class=""><span>C#</span></a></li>
+                <li><a href="#" class=""><span>C++</span></a></li>
+                <li><a href="#" class=""><span>C</span></a></li>
+                <li><a href="#" class=""><span>NODE.JS</span></a></li>
+            </ul>
+        </div>
+        <div class="listCenter"><span>menu</span></div>
     </div>
 
     <script src="jquery-2.0.2.min.js"></script>
     <script>
         $(".list2 .listCenter").click(function() {
             $(this).parent(".list2").toggleClass("show");
+        });
+        $(".list3 .listCenter").click(function() {
+            $(this).parent(".list3").toggleClass("show");
+            if($(this).text() == "menu") $(this).html("<span>close</span>");
+            else if($(this).text() == "close") $(this).html("<span>menu</span>");
         });
     </script>
 </body>
