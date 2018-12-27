@@ -1,21 +1,43 @@
-/// 从上往下滚入，从上往下滚出
-//滚入
-$(".scale").click(function() {
-    $(".overlay").addClass("overlay_scale");
+/// 基础样式
+//入
+$(".J-button").click(function() {
+    var _id = this.dataset.index;
+    $(".overlay").addClass("overlay_" + _id);
     setTimeout(function() {
         $(".overlay").addClass("open");
-        $(".overlay_Div button").get(0).onclick = scaleFunction;
+        $(".overlay_Div button").get(0).onclick = function(){ closeFunction(_id, $(".overlay")); };
     }, 500);
 });
-//滚出
-function scaleFunction() {
-    $(this).parents(".overlay_scale").addClass("close");
-    $(this).parents(".overlay_scale").removeClass("open");
+//出
+function closeFunction(_id, baseEle) {
+    $(baseEle).addClass("close");
+    $(baseEle).removeClass("open");
 
     setTimeout(function() {
-        $(".overlay_scale").removeClass("close");
-        $(".overlay_scale").removeClass("overlay_scale");
+        $(baseEle).removeClass("close");
+        $(baseEle).removeClass("overlay_" + _id);
     }, 500);
 }
 
 /// --------------------------------------------------------------------------------------------------
+
+/// 掉落
+//入
+$(".J-drop").click(function() {
+    $("body").addClass("body_drop");
+
+    setTimeout(function() {
+        $(".overlay").addClass("open");
+        $(".overlay_Div button").get(0).onclick = function(){ closeDropFunction(); };
+    }, 100);
+});
+//出
+function closeDropFunction() {
+    $(".overlay").removeClass("open");
+    $(".overlay").addClass("close");
+
+    setTimeout(function() {
+        $(".overlay").removeClass("close");
+        $(".body_drop").removeClass("body_drop");
+    }, 500);
+}

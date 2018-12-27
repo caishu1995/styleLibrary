@@ -13,7 +13,7 @@ body{
 }
 .buttonList{
 	background: white;
-	height: 50%;
+	height: 100%;
 	padding: 8px;
 	width: calc(100% - 16px);
 }
@@ -109,10 +109,176 @@ body{
 		-webkit-transform: scale(0);
 		transform: scale(0);
 		
-		-webkit-transition: -webkit-transform 0.5S linear;
-		transition: transform 0.5S linear;
+		-webkit-transition: -webkit-transform 0.2S linear;
+		transition: transform 0.2S linear;
 	}
 		.overlay_scale.open .overlay_Div {
 			-webkit-transform: scale(1);
 			transform: scale(1);
+		}
+
+
+/* 右滑入，右滑出 */
+.overlay_slideRight {}
+	.overlay_slideRight .overlay_Div{
+		-webkit-transform: translateX(100px);
+		transform: translateX(100px);
+		
+		-webkit-transition: -webkit-transform 0.2S linear;
+		transition: transform 0.2S linear;
+	}
+		.overlay_slideRight.open .overlay_Div {
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+		}
+
+
+/* 下滑入，下滑出 */
+.overlay_slideDown {}
+	.overlay_slideDown .overlay_Div{
+		-webkit-transform: translateY(100px);
+		transform: translateY(100px);
+		
+		-webkit-transition: -webkit-transform 0.2S linear;
+		transition: transform 0.2S linear;
+	}
+		.overlay_slideDown.open .overlay_Div {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+
+
+/* 旋转 */
+.overlay_rotate {}
+	.overlay_rotate .overlay_Div{
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+		
+		-webkit-transition: -webkit-transform 0.2S linear;
+		transition: transform 0.2S linear;
+	}
+		.overlay_rotate.open .overlay_Div {
+			-webkit-transform: rotate(0);
+			transform: rotate(0);
+		}
+
+
+/* 缩小展示，放大隐藏 */
+.overlay_scaleSmall {}
+	.overlay_scaleSmall .overlay_Div{
+		-webkit-transform: scale(2);
+		transform: scale(2);
+		
+		-webkit-transition: -webkit-transform 0.2S linear;
+		transition: transform 0.2S linear;
+	}
+		.overlay_scaleSmall.open .overlay_Div {
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		}
+		.overlay_scaleSmall.close .overlay_Div {
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		}
+
+
+/* alert框，上往下滚动 */
+.overlay_alert {
+	padding: 0 calc(50vw - 300px) calc(100vh - 315px);
+}
+	.overlay_alert .overlay_Div{
+		-webkit-transform: translateY(-315px);
+		transform: translateY(-315px);
+		
+		-webkit-transition: -webkit-transform 0.2S linear;
+		transition: transform 0.2S linear;
+	}
+		.overlay_alert.open .overlay_Div {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+
+/* x轴旋转 */
+.overlay_rotateX {}
+	.overlay_rotateX .overlay_Div{
+		-webkit-transform: rotateX(-90deg);
+		transform: rotateX(-90deg);
+		
+		-webkit-transition: -webkit-transform 0.2S linear;
+		transition: transform 0.2S linear;
+	}
+		.overlay_rotateX.open .overlay_Div {
+			-webkit-transform: rotateX(0);
+			transform: rotateX(0);
+		}
+
+
+/* y轴旋转 */
+.overlay_rotateY {}
+	.overlay_rotateY .overlay_Div{
+		-webkit-transform: rotateY(-90deg);
+		transform: rotateY(-90deg);
+		
+		-webkit-transition: -webkit-transform 0.2S linear;
+		transition: transform 0.2S linear;
+	}
+		.overlay_rotateY.open .overlay_Div {
+			-webkit-transform: rotateY(0);
+			transform: rotateY(0);
+		}
+
+
+/* z轴旋转 */
+.overlay_rotateZ {}
+	.overlay_rotateZ .overlay_Div{
+		-webkit-transform: rotateZ(-90deg);
+		transform: rotateZ(-90deg);
+		
+		-webkit-transition: -webkit-transform 0.2S linear;
+		transition: transform 0.2S linear;
+	}
+		.overlay_rotateZ.open .overlay_Div {
+			-webkit-transform: rotateZ(0);
+			transform: rotateZ(0);
+		}
+
+
+/* 掉入 */
+.body_drop {
+	-webkit-perspective: 500px;
+	perspective: 500px;
+}
+	.body_drop .buttonList{
+		-webkit-transform-origin: 50% 100%;
+		transform-origin: 50% 100%;
+		-webkit-animation: OpenTop 0.4s forwards ease-in;
+		animation: OpenTop 0.4s forwards ease-in;
+	}
+@-webkit-keyframes OpenTop {
+	50% {
+		-webkit-transform: rotateX(10deg);
+		-webkit-animation-timing-function: ease-out;
+	}
+}
+@keyframes OpenTop {
+	50% {
+		transform: rotateX(10deg);
+		animation-timing-function: ease-out;
+	}
+}
+.body_drop .overlay {}
+	.body_drop .overlay .overlay_Div{
+		-webkit-transform: translateY(-50vh);
+		transform: translateY(-50vh);
+		
+		-webkit-transition: -webkit-transform 0.2S linear;
+		transition: transform 0.2S linear;
+	}
+		.body_drop .overlay.open .overlay_Div {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+		.body_drop .overlay.close .overlay_Div {
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
 		}
