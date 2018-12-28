@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件-集成问答</title>
+    <link rel="stylesheet" href="QA.css">
+</head>
+<body>
+    <div id="showPart" style="background: #2dcb89; float: left; padding: 25px 25px; width: 450px;"></div>
+
+    <script src="QA.js"></script>
+    <script>
+        QA(
+            "showPart",
+            ["你是人么？（是）", "我是好人么？（是）", "我很可爱么？（是）", "我很乖么？（是）", "你是不是傻？（是）", "你觉不觉得很无聊？（是）"],
+            function(data) {
+                console.log(data);
+            },
+            function(index, answer) {
+                if(answer != "是") return "第" + index + "题答案只能填是";
+                else return "";
+            }
+        )
+    </script>
+</body>
+</html>
