@@ -1,10 +1,11 @@
-/* 小图标1 */
-.smallIcon1{
+/* 小图标1-1 */
+.smallIcon1-1{
+	background: rgba(255,255,255,0.1);
     float: left;
     position: relative;
     padding: 5px;
 }
-    .smallIcon1 span{
+    .smallIcon1-1 span{
         background-color: #4c1c1a;
         border: 1px solid #4c1c1a;
         border-radius: 3px;
@@ -17,7 +18,7 @@
         top: 25px;
         text-align: center;
     }
-        .smallIcon1 span:before {
+        .smallIcon1-1 span:before {
             bottom: -14px;
             border: 7px solid transparent;
             border-top-color: #4c1c1a;
@@ -27,20 +28,14 @@
             position: absolute;
             width: 0;
         }
-        .smallIcon1:hover span{
-            opacity: 1;
-            transition: opacity .2S linear;
-            -moz-transition: opacity .2S linear;
-            -webkit-transition: opacity .2S linear;
-            -o-transition: opacity .2S linear;
-
+        .smallIcon1-1:hover span{
             top: 5px;
-            transition: top .2S linear;
-            -moz-transition: top .2S linear;
-            -webkit-transition: top .2S linear;
-            -o-transition: top .2S linear;
+            opacity: 1;
+
+            -webkit-transition: top .2S linear, opacity .2S linear;
+            transition: top .2S linear, opacity .2S linear;
         }
-    .smallIcon1 div{
+    .smallIcon1-1 div{
         background-color: white;
         border: 1px solid white;
         border-radius: 30px;
@@ -49,3 +44,613 @@
         margin-top: 40px;
         width: 60px;
     }
+
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+
+/* 小图标2-1-1 */
+.smallIcon2-1-1{
+	background: rgba(255,255,255,0.1);
+	border-radius: 50%;
+	color: white;
+	height: 90px;
+	line-height: 90px!important;
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	width: 90px;
+	
+	-webkit-transition: background 0.2s, color 0.2s;
+	transition: background 0.2s, color 0.2s;
+}
+	.smallIcon2-1-1:before {
+		content: "\f3cd";
+		font-size: 3rem;
+	}
+	.smallIcon2-1-1:after{
+		border-radius: 50%;
+		box-shadow: 0 0 0 4px #fff;
+		content: "";
+		height: 100%;
+		left: -5px;
+		opacity: 0;
+		padding: 5px;
+		position: absolute;
+		top: -5px;
+		width: 100%;
+		
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+		
+		-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+		transition: transform 0.2s, opacity 0.2s;
+	}
+	.smallIcon2-1-1:hover{
+		background: #FFF;
+		color: #41ab6b;
+	}
+		.smallIcon2-1-1:hover:after{
+			opacity: 1;
+			
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		}
+
+
+/* 小图标2-1-2 */
+.smallIcon2-1-2{
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px #fff;
+	height: 90px;
+	line-height: 90px!important;
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	width: 90px;
+	
+	-webkit-transition: background 0.2s, color 0.2s;
+	transition: background 0.2s, color 0.2s;
+}
+	.smallIcon2-1-2:before {
+		color: #41ab6b;
+		content: "\f3cd";
+		font-size: 3rem;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+	.smallIcon2-1-2:after{
+		background: #FFF;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		content: "";
+		height: 100%;
+		left: -1px;
+		position: absolute;
+		top: -1px;
+		width: 100%;
+		z-index: 1;
+		
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		
+		-webkit-transition: -webkit-transform 0.2s;
+		transition: transform 0.2s;
+	}
+		.smallIcon2-1-2:hover:after{
+			-webkit-transform: scale(0.85);
+			transform: scale(0.85);
+		}
+
+
+/* 小图标2-2-1 */
+.smallIcon2-2-1{
+	color: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px #fff;
+	height: 90px;
+	line-height: 90px!important;
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	width: 90px;
+	
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+	.smallIcon2-2-1:before {
+		content: "\f3cd";
+		font-size: 3rem;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+	.smallIcon2-2-1:after{
+		background: #FFF;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		content: "";
+		height: 100%;
+		left: -1px;
+		position: absolute;
+		top: -1px;
+		width: 100%;
+		z-index: 1;
+		
+		-webkit-transform: scale(0);
+		transform: scale(0);
+		
+		-webkit-transition: -webkit-transform 0.2s;
+		transition: transform 0.2s;
+	}
+	.smallIcon2-2-1:hover{
+		color: #41ab6b;
+	}
+		.smallIcon2-2-1:hover:after{
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		}
+
+
+/* 小图标2-2-2 */
+.smallIcon2-2-2{
+	color: #41ab6b;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px #fff;
+	height: 90px;
+	line-height: 90px!important;
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	width: 90px;
+	
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+	.smallIcon2-2-2:before {
+		content: "\f3cd";
+		font-size: 3rem;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+	.smallIcon2-2-2:after{
+		background: #FFF;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		content: "";
+		height: 100%;
+		left: -1px;
+		position: absolute;
+		top: -1px;
+		width: 100%;
+		z-index: 1;
+		
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		
+		-webkit-transition: -webkit-transform 0.2s;
+		transition: transform 0.2s;
+	}
+	.smallIcon2-2-2:hover{
+		color: #fff;
+	}
+		.smallIcon2-2-2:hover:after{
+			-webkit-transform: scale(0);
+			transform: scale(0);
+		}
+
+
+/* 小图标2-3-1 */
+.smallIcon2-3-1{
+	color: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px #fff;
+	height: 90px;
+	line-height: 90px!important;
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	width: 90px;
+	
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+	.smallIcon2-3-1:before {
+		content: "\f3cd";
+		font-size: 3rem;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+	.smallIcon2-3-1:after{
+		background: #FFF;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		content: "";
+		height: 100%;
+		left: -1px;
+		opacity: 0;
+		position: absolute;
+		top: -1px;
+		width: 100%;
+		z-index: 1;
+		
+		-webkit-transform: scale(1.5);
+		transform: scale(1.5);
+		
+		-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+		transition: transform 0.2s, opacity 0.2s;
+	}
+	.smallIcon2-3-1:hover{
+		color: #41ab6b;
+	}
+		.smallIcon2-3-1:hover:after{
+			opacity: 1;
+			
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		}
+
+
+/* 小图标2-3-2 */
+.smallIcon2-3-2{
+	color: #41ab6b;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px #fff;
+	height: 90px;
+	line-height: 90px!important;
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	width: 90px;
+	
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+	.smallIcon2-3-2:before {
+		content: "\f3cd";
+		font-size: 3rem;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+	.smallIcon2-3-2:after{
+		background: #FFF;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		content: "";
+		height: 100%;
+		left: -1px;
+		position: absolute;
+		top: -1px;
+		width: 100%;
+		z-index: 1;
+		
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		
+		-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+		transition: transform 0.2s, opacity 0.2s;
+	}
+	.smallIcon2-3-2:hover{
+		color: #fff;
+	}
+		.smallIcon2-3-2:hover:after{
+			opacity: 0;
+			
+			-webkit-transform: scale(1.5);
+			transform: scale(1.5);
+		}
+
+
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+
+/* 小图标3-1 */
+.smallIcon3-1{
+	color: #fff;
+	border-radius: 50%;
+	height: 90px;
+	line-height: 90px!important;
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	width: 90px;
+	
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+	.smallIcon3-1:before {
+		content: "\f3cd";
+		font-size: 3rem;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+	.smallIcon3-1:after{
+		border: 4px solid #fff;
+		border-radius: 50%;
+		content: "";
+		height: 100%;
+		left: -5px;
+		position: absolute;
+		top: -5px;
+		width: 100%;
+		z-index: 1;
+	}
+	.smallIcon3-1:hover{}
+		.smallIcon3-1:hover:after{
+			border: 4px dashed #fff;
+		}
+
+
+/* 小图标3-2 */
+.smallIcon3-2{
+	color: #fff;
+	border-radius: 50%;
+	height: 90px;
+	line-height: 90px!important;
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	width: 90px;
+	
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+	.smallIcon3-2:before {
+		content: "\f3cd";
+		font-size: 3rem;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+	.smallIcon3-2:after{
+		border: 4px solid #fff;
+		border-radius: 50%;
+		content: "";
+		height: 100%;
+		left: -5px;
+		position: absolute;
+		top: -5px;
+		width: 100%;
+		z-index: 1;
+	}
+	.smallIcon3-2:hover{}
+		.smallIcon3-2:hover:after{
+			border: 4px dashed #fff;
+			-webkit-animation: circle3-2 10s linear infinite;
+			animation: circle3-2 10s linear infinite;
+		}
+@keyframes circle3-2 {
+	25% { transform: rotate(90deg); }
+	50% { transform: rotate(180deg); }
+	75% { transform: rotate(270deg); }
+	100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes circle3-2 {
+	25% { -webkit-transform: rotate(90deg); }
+	50% { -webkit-transform: rotate(180deg); }
+	75% { -webkit-transform: rotate(270deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+
+/* 小图标3-3 */
+.smallIcon3-3{
+	color: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px #fff;
+	height: 90px;
+	line-height: 90px!important;
+	margin: 10px;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	width: 90px;
+}
+	.smallIcon3-3:before {
+		content: "\f3cd";
+		font-size: 3rem;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+		
+		-webkit-transform: translate(0);
+		transform: translate(0);
+	}
+	.smallIcon3-3:hover{
+		background-color: white;
+		box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.3);
+		color: #41ab6b;
+	}
+		.smallIcon3-3:hover:before{
+			-webkit-animation: toRight3-3 0.5s forwards;
+			animation: toRight3-3 0.5s forwards;
+		}
+@keyframes toRight3-3 {
+	49% { transform: translate(100%); }
+	51% { transform: translate(-100%); }
+}
+@-webkit-keyframes toRight3-3 {
+	49% { -webkit-transform: translate(100%); }
+	51% { -webkit-transform: translate(-100%);  }
+}
+
+
+/* 小图标3-4 */
+.smallIcon3-4{
+	color: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px #fff;
+	height: 90px;
+	line-height: 90px!important;
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	width: 90px;
+}
+	.smallIcon3-4:before {
+		content: "\f2f9";
+		font-size: 3rem;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+		
+		-webkit-transform: translate(0);
+		transform: translate(0);
+	}
+	.smallIcon3-4:hover{
+		background-color: white;
+		color: #41ab6b;
+	}
+	.smallIcon3-4:hover:before{
+		-webkit-animation: circle3-4 2s linear infinite;
+		animation: circle3-4 2s linear infinite;
+	}
+@keyframes circle3-4 {
+	25% { transform: rotate(90deg); }
+	50% { transform: rotate(180deg); }
+	75% { transform: rotate(270deg); }
+	100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes circle3-4 {
+	25% { -webkit-transform: rotate(90deg); }
+	50% { -webkit-transform: rotate(180deg); }
+	75% { -webkit-transform: rotate(270deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+
+/* 小图标3-5 */
+.smallIcon3-5{
+	color: #dadada;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px #fff;
+	height: 90px;
+	line-height: 90px!important;
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	width: 90px;
+	
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+	.smallIcon3-5:before {
+		content: "\f3cd";
+		font-size: 3rem;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	.smallIcon3-5:after{
+		border-radius: 50%;
+		content: "";
+		height: calc(100% + 10px);
+		left: -3px;
+		position: absolute;
+		top: -3px;
+		width: calc(100% + 10px);
+		
+		-webkit-transition: box-shadow 0.2s;
+		transition: box-shadow 0.2s;
+	}
+	.smallIcon3-5:hover{
+		color: #fff;
+	}
+		.smallIcon3-5:hover:after{
+			box-shadow: 3px 3px 0 #fff;
+			
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box;
+		}
+
+
+/* 小图标3-6 */
+.smallIcon3-6{
+	background: rgba(255,255,255,0.3);
+	color: #fff;
+	border-radius: 50%;
+	height: 90px;
+	line-height: 90px!important;
+	margin: 10px;
+	position: relative;
+	text-align: center;
+	width: 90px;
+	
+	-webkit-transition: background 0.1s, -webkit-transform 0.1s;
+	transition: background 0.1s, transform 0.1s;
+}
+	.smallIcon3-6:before {
+		content: "\f3cd";
+		font-size: 3rem;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	.smallIcon3-6:after{
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+		border-radius: 50%;
+		content: "";
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	.smallIcon3-6:hover{
+		background: rgba(255,255,255,0.15);
+		
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+		.smallIcon3-6:hover:after{
+			-webkit-animation: scale3-6 1.3s linear 1 0.1s;
+			animation: scale3-6 1.3s linear 1 0.1s;
+		}
+@keyframes scale3-6 {
+	0%   { opacity: 0.3; }
+	40%  { opacity: 0.5; box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #41ab6b, 0 0 0 10px rgba(255,255,255,0.5); }
+	100% { opacity: 0  ; box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #41ab6b, 0 0 0 10px rgba(255,255,255,0.5); transform: scale(1.5); }
+}
+@-webkit-keyframes scale3-6 {
+	0%   { opacity: 0.3; }
+	40%  { opacity: 0.5; box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #41ab6b, 0 0 0 10px rgba(255,255,255,0.5); }
+	100% { opacity: 0  ; box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #41ab6b, 0 0 0 10px rgba(255,255,255,0.5); -webkit-transform: scale(1.5); }
+}
