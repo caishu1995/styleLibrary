@@ -1,0 +1,53 @@
+﻿/*注： 所有的单元格的和应大于MyPersonalTable-26px-29px(26为滚动条，29为单选框)*/
+/*注： 每个单元格实际宽度为宽度+21*/
+/*注： 从2开始，1默认为单选多选按钮区*/
+/*注： 最后一个为删除按钮区，宽度为91px*/
+#table1 .gridTitle ul, #table1 .gridBody ul {
+    width: 817px;
+}
+#table1 .gridTitle li:nth-child(1), #table1 .gridBody li:nth-child(1) {
+    display: none;
+}
+#table1 .gridTitle li:nth-child(2), #table1 .gridBody li:nth-child(2) {
+    width: 100px;
+}
+#table1 .gridTitle li:nth-child(3), #table1 .gridBody li:nth-child(3) {
+    width: 100px;
+}
+#table1 .gridTitle li:nth-child(4), #table1 .gridBody li:nth-child(4) {
+    width: 100px;
+}
+#table1 .gridTitle li:nth-child(5), #table1 .gridBody li:nth-child(5) {
+    width: 100px;
+}
+#table1 .gridTitle li:nth-child(6), #table1 .gridBody li:nth-child(6) {
+    width: 100px;
+}
+#table1 .gridTitle li:nth-child(7), #table1 .gridBody li:nth-child(7) {
+    width: 100px;
+}
+
+#table2 .gridTitle ul, #table2 .gridBody ul {
+	width: 817px;
+}
+#table2 .gridTitle li:nth-child(1), #table2 .gridBody li:nth-child(1) {
+	display: none;
+}
+#table2 .gridTitle li:nth-child(2), #table2 .gridBody li:nth-child(2) {
+	width: 100px;
+}
+#table2 .gridTitle li:nth-child(3), #table2 .gridBody li:nth-child(3) {
+	width: 100px;
+}
+#table2 .gridTitle li:nth-child(4), #table2 .gridBody li:nth-child(4) {
+	width: 100px;
+}
+#table2 .gridTitle li:nth-child(5), #table2 .gridBody li:nth-child(5) {
+	width: 100px;
+}
+#table2 .gridTitle li:nth-child(6), #table2 .gridBody li:nth-child(6) {
+	width: 100px;
+}
+#table2 .gridTitle li:nth-child(7), #table2 .gridBody li:nth-child(7) {
+	width: 100px;
+}

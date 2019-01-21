@@ -1,0 +1,358 @@
+﻿button {
+    background-color: white;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    color: #525050;
+}
+    button:hover {
+        background-color: rgb(221, 221, 221);
+    }
+    button:focus {
+        outline-color: #a8c4ae;
+    }
+    button img{
+        float: left;
+        width: 16px;
+    }
+input {
+    border: 1px solid #c5c5c5;
+    border-radius: 3px;
+    background-color: transparent;
+    float: left;
+    width: calc(100% - 2px);
+}
+
+.tableDiv {
+    border: 1px solid #c5c5c5;
+    margin: 5px 2.5%;
+    padding: 0;
+    width: 95%;
+}
+    .tableDiv ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+        .tableDiv ul li {
+            border: 1px solid #c5c5c5;
+            float: left;
+            font-size: 14px;
+            height: calc(100% - 10px);
+            list-style-type: none;
+            line-height: 20px;
+            overflow: hidden;
+            padding: 5px 10px 4px 10px;
+        }
+            .tableDiv ul li .readInput {
+                border: 0;
+                border-bottom: 1px solid #c5c5c5;
+            }
+    /*删除、恢复按钮*/
+    .tableDiv .deleteButton, .tableDiv .gridBody .recoverButton {
+        float: left;
+        height: 100%;
+        margin: 0;
+        width: 75px;
+    }
+    .tableDiv .deleteButton:focus {
+        background-color: #ecfbd6;
+    }
+    .tableDiv .recoverButton:focus{
+        background-color: #f7f7d0;
+    }
+
+    .tableDiv .gridTitle {
+        float: left;
+        overflow: hidden;
+        width: 100%;
+    }
+        .tableDiv .gridTitle ul li {
+            background-color: #eae8e8;
+            background-image: none, -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
+            background-image: none, -webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            background-image: none, linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            border-top: 0;
+            border-left: 0;
+        }
+        .tableDiv .gridTitle ul li:first-child {
+            height: calc(100% - 8px);
+            padding: 3.5px;
+            width: 21px;
+        }
+        .tableDiv .gridTitle .HeaderLeft {
+            float:left;
+            height: calc(100% + 16.5px); /*包含横向滚动条*/
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: calc(100% - 18px);
+        }
+            .tableDiv .gridTitle .HeaderLeft li:last-child {
+                width: 70px;
+            }
+        .tableDiv .gridTitle .HeaderRight {
+            background-color: #eae8e8;
+            background-image: none, -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,.6)),to(rgba(255,255,255,0)));
+            background-image: none, -webkit-linear-gradient(top,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            background-image: none, linear-gradient(to bottom,rgba(255,255,255,.6) 0,rgba(255,255,255,0) 100%);
+            border-bottom: 1px solid #c5c5c5;
+            border-left: 1px solid #c5c5c5;
+            float:right;
+            height: calc(100% - 1px);
+            padding: 0;
+            width: 17px;
+        }
+
+    .tableDiv .gridBody {
+        height: calc(100% - 29px);
+        overflow-y: scroll;
+        width: 100%;
+    }
+        .tableDiv .gridBody ul:hover li{
+            background-color: #d0d0d0;
+        }
+        .tableDiv .gridBody ul li {
+            border-bottom: 0;
+            border-left: 0;
+            border-top: 0;
+        }
+        .tableDiv .gridBody ul li:first-child {
+            height: 13px;
+            padding: 7.5px 3.5px 7.5px 3.5px;
+            width: 21px;
+        }
+            .tableDiv .gridBody ul li:first-child input{
+                margin: 0;
+            }
+        .tableDiv .gridBody ul li:last-child {
+            width: 70px;
+        }
+        /*单双行颜色*/
+        .tableDiv .gridBody ul:nth-child(odd) {
+            background-color: white;
+        }
+        .tableDiv .gridBody ul:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+        /*用于输入时，隐藏展示区域*/
+        .tableDiv .gridBody .writeColumns .writeInput {
+            display: block !important;
+        }
+            .tableDiv .gridBody .writeColumns .writeInput:focus {
+                outline-color: #525050;
+            }
+        .tableDiv .gridBody .writeColumns .readInput {
+            display: none !important;
+        }
+        /*正常状态样式*/
+        .tableDiv .gridBody .normalRow li .writeInput{
+            display: none;
+        }
+        .tableDiv .gridBody .normalRow li .readInput{
+            display: block;
+        }
+        .tableDiv .gridBody .normalRow li .deleteButton {
+            display: block;
+        }
+        .tableDiv .gridBody .normalRow li .recoverButton {
+            display: none;
+        }
+        /*修改状态样式*/
+        .tableDiv .gridBody .updateRow {
+            background-color: #ecfbd6 !important;
+        }
+        .tableDiv .gridBody .updateRow li .writeInput{
+            display: none;
+        }
+        .tableDiv .gridBody .updateRow li .readInput{
+            display: block;
+        }
+        .tableDiv .gridBody .updateRow li .deleteButton {
+            display: block;
+        }
+        .tableDiv .gridBody .updateRow li .recoverButton {
+            display: none;
+        }
+        /*删除状态样式*/
+        .tableDiv .gridBody .deleteRow {
+            background-color: #ecfbd6 !important;
+        }
+        .tableDiv .gridBody .deleteRow li .writeInput {
+            display: none;
+        }
+        .tableDiv .gridBody .deleteRow li .readInput {
+            color: #8f8c8c;
+            display: block;
+            text-decoration:line-through;
+        }
+        .tableDiv .gridBody .deleteRow li .deleteButton {
+            display: none;
+        }
+        .tableDiv .gridBody .deleteRow li .recoverButton {
+            display: block;
+        }
+        /*新增状态样式*/
+        .tableDiv .gridBody .addRow {
+            background-color: #eefcf5 !important;
+        }
+        .tableDiv .gridBody .addRow li .writeInput{
+            display: none;
+        }
+        .tableDiv .gridBody .addRow li .readInput{
+            display: block;
+        }
+        .tableDiv .gridBody .addRow li .deleteButton {
+            display: block;
+        }
+        .tableDiv .gridBody .addRow li .recoverButton {
+            display: none;
+        }
+        /*行正在新增状态样式*/
+        .tableDiv .gridBody .addWritingRow {
+            background-color: #eefcf5 !important;
+        }
+        .tableDiv .gridBody .addWritingRow li .writeInput{
+            display: block;
+        }
+        .tableDiv .gridBody .addWritingRow li .readInput{
+            display: none;
+        }
+        .tableDiv .gridBody .addWritingRow li .deleteButton {
+            display: block;
+        }
+        .tableDiv .gridBody .addWritingRow li .recoverButton {
+            display: none;
+        }
+        /*新增按钮行*/
+        .tableDiv .gridBody .addButtonRow li:first-child, .tableDiv .gridBody .addButtonRow li:nth-child(2){
+            border-bottom: 1px solid #c5c5c5;
+            border-top: 1px solid #c5c5c5;
+            height: calc(100% - 10px);
+            padding: 4px 20px;
+            width: calc(100% - 41px) !important;
+        }
+            .tableDiv .gridBody .addButtonRow li button {
+                height: 100%;
+                width: 70px;
+            }
+                .tableDiv .gridBody .addButtonRow li button:focus{
+                    background-color: #eefcf5;
+                }
+
+    .tableDiv .gridUlMenu {
+        display: none;
+        position: absolute;
+        width: 70px;
+        z-index: 100;
+    }
+        .tableDiv .gridUlMenu li {
+            border: 0;
+            height: 25px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+            .tableDiv .gridUlMenu li button {
+                height: 100%;
+                margin: 0;
+                width: 100%;
+            }
+        /*正常状态样式*/
+        .tableDiv .normal {
+            display: block;
+        }
+        .tableDiv .normal li .deleteButton {
+            display: block;
+        }
+        .tableDiv .normal li .recoverButton {
+            display: none;
+        }
+        /*删除状态样式*/
+        .tableDiv .delete {
+            display: block;
+        }
+        .tableDiv .delete li .deleteButton {
+            display: none;
+        }
+        .tableDiv .delete li .recoverButton {
+            display: block;
+        }
+
+.saveDiv {
+    font-size: 14px;
+    width: 100%;
+}
+    .saveDiv button {
+        height: calc(100% - 6px);
+        float: right;
+        margin: 3px 19px 3px 10px;
+        width: 100px;
+    }
+    .saveDiv button:focus {
+        background-color: #d1f3d8;
+    }
+    .saveDiv button:disabled {
+        background-color:#d0d0d0;
+        color: white;
+    }
+    .saveDiv .saveText{
+        border: 2px solid #c5c5c5;
+        border-radius: 5px;
+        color: red;
+        display: none;
+        float: right;
+        height: 19px;
+        margin: 4px 0;
+        position: relative;
+        padding-left: 5px; 
+        width: 105px;
+    }
+    .saveDiv .saveText:before{
+        border-left: 6.5px solid #c5c5c5;
+        border-top: 6.5px solid transparent;
+        border-bottom: 6.5px solid transparent;
+        content: "";
+        height: 0;
+        left: 110px;
+        position: absolute;
+        top: 3px;
+        width: 0;
+    }
+    .saveDiv .saveText:after{
+        border-left: 2.5px solid #fff;
+        border-top: 2.5px solid transparent;
+        border-bottom: 2.5px solid transparent;
+        content: "";
+        height: 0;
+        left: 110px;
+        position: absolute;
+        top: 7px;
+        width: 0;
+    }
+
+/*大版*/
+.bigType .tableDiv ul, .bigType .tableDiv .gridTitle, .bigType .saveDiv  {
+    height: 35px;
+}
+.bigType .tableDiv {
+    height: calc(100% - 47px);
+}
+.bigType .tableDiv .gridBody {
+    height: calc(100% - 35px);
+}
+    .bigType .tableDiv .gridBody li input {
+        height: 22px;
+        padding: 1px 3px;
+    }
+.bigType .saveDiv .saveText{
+    margin: 10px 0 0 0;
+}
+/*小版*/
+.smallType .tableDiv ul, .smallType .tableDiv .gridTitle, .smallType .saveDiv  {
+    height: 29px;
+}
+.smallType .tableDiv {
+    height: calc(100% - 41px);
+}
+.smallType .tableDiv .gridBody {
+    height: calc(100% - 29px);
+}
