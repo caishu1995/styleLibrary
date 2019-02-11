@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>菜单</title>
+    <title>控件-列表</title>
     <style>
         html,body{
             height: 100%;
@@ -60,16 +60,51 @@
         </div>
         <div class="listCenter"><span>menu</span></div>
     </div>
+    <div class="list4 part">
+        <ul class="listMenu">
+            <li data-index="0">SIGHT SEEING</li>
+            <li data-index="1">CSS3</li>
+            <li data-index="2">JAVASCRIPT</li>
+            <li data-index="3">JSON</li>
+            <li data-index="4">PHP</li>
+            <li data-index="5">JAVA</li>
+            <li data-index="6">C#</li>
+        </ul>
+        <span class="listCenter">请选择</span>
+        <select style="display: none">
+            <option value="0">SIGHT SEEING</option>
+            <option value="1">CSS3</option>
+            <option value="2">JAVASCRIPT</option>
+            <option value="3">JSON</option>
+            <option value="4">PHP</option>
+            <option value="5">JAVA</option>
+            <option value="6">C#</option>
+        </select>
+    </div>
 
     <script src="jquery-2.0.2.min.js"></script>
     <script>
         $(".list2 .listCenter").click(function() {
             $(this).parent(".list2").toggleClass("show");
         });
+
         $(".list3 .listCenter").click(function() {
             $(this).parent(".list3").toggleClass("show");
             if($(this).text() == "menu") $(this).html("<span>close</span>");
             else if($(this).text() == "close") $(this).html("<span>menu</span>");
+        });
+
+        $(".list4 .listCenter").click(function(ev) {
+            $(this).parent().addClass("showList");
+            ev.stopPropagation();
+        });
+        $(".list4 .listMenu li").click(function(ev) {
+            $(".list4 .listCenter").text($(this).text());
+            $(".list4 select").val($(this).attr("data-index"));
+            $(".list4").removeClass("showList");
+        });
+        $(document).click(function() {
+            $(".list4").removeClass("showList");
         });
     </script>
 </body>

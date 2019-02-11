@@ -661,3 +661,58 @@
 				-o-transform: rotate(calc(var(--range)*4deg)) skewY(-58deg); 	   /* Opera */
 				transform: rotate(calc(var(--range)*4deg)) skewY(-58deg);
 			}
+
+
+
+/* 点击展示下拉框具体内容，点击其他地方恢复原状 */
+.list4{
+	color: white;
+	margin-top: 120px;
+	position: relative;
+}
+	.list4:before{
+		background-color: #424a4f;
+		content: "";
+		height: 100%;
+		left: 0;
+		top: 0;
+		pointer-events: none;
+		position: absolute;
+		width: 100%;
+		z-index: -1;
+		
+		-webkit-transition: -webkit-transform 0.3s;
+		transition: transform 0.3s;
+	}
+	.list4 .listCenter{
+		cursor: pointer; float: left; opacity: 1; padding: 16px; visibility: visible; width: 200px;
+		
+		-webkit-transition: -webkit-transform 0.3s, opacity 0.1s linear 0.01S, visibility 0.1s linear 0.01S;
+		transition: transform 0.3s, opacity 0.1s linear 0.01S, visibility 0.1s linear 0.01S;
+	}
+	.list4 .listMenu{ left: 0; list-style: none; opacity: 0; top: -106px; margin: 10px 10px; padding: 0; position: absolute; visibility: hidden; width: 212px; }
+		.list4 .listMenu li{
+			cursor: pointer; margin: 0; padding: 7px 10px; width: calc(100% - 20px);
+			
+			-webkit-transform: translateX(232px); transform: translateX(232px);
+		}
+			.list4 .listMenu li:nth-child(1){ -webkit-transition: -webkit-transform 0.1s linear 0.00s; transition: transform 0.1s linear 0.00s; }
+			.list4 .listMenu li:nth-child(2){ -webkit-transition: -webkit-transform 0.1s linear 0.05s; transition: transform 0.1s linear 0.05s; }
+			.list4 .listMenu li:nth-child(3){ -webkit-transition: -webkit-transform 0.1s linear 0.10s; transition: transform 0.1s linear 0.10s; }
+			.list4 .listMenu li:nth-child(4){ -webkit-transition: -webkit-transform 0.1s linear 0.15s; transition: transform 0.1s linear 0.15s; }
+			.list4 .listMenu li:nth-child(5){ -webkit-transition: -webkit-transform 0.1s linear 0.20s; transition: transform 0.1s linear 0.20s; }
+			.list4 .listMenu li:nth-child(6){ -webkit-transition: -webkit-transform 0.1s linear 0.25s; transition: transform 0.1s linear 0.25s; }
+			.list4 .listMenu li:nth-child(7){ -webkit-transition: -webkit-transform 0.1s linear 0.30s; transition: transform 0.1s linear 0.30s; }
+
+	.list4.showList:before{
+		-webkit-transform: scaleY(5);
+		transform: scaleY(5);
+	}
+	.list4.showList .listCenter{
+		opacity: 0; visibility: hidden;
+		
+		-webkit-transform: translateX(-232px);
+		transform: translateX(-232px);
+	}
+	.list4.showList .listMenu{ opacity: 1; visibility: visible; }
+		.list4.showList .listMenu li{ -webkit-transform: translateX(0); transform: translateX(0); }
