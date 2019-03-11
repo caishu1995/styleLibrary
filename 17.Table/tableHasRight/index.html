@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>右键菜单</title>
+    <style>
+        html,body{
+            float: left;
+            height: 100%;
+            margin: 0;
+            width: 100%;
+        }
+        #myTable{
+            border: 1px solid #c5c5c5;
+            border-collapse: collapse;
+            margin: 100px 10%;
+            width: 80%;
+        }
+            #myTable td{
+                border: 1px solid #c5c5c5;
+                height: 30px;
+                text-align: center;
+            }
+    </style>
+    <link rel="stylesheet" href="rightKey.css">
+</head>
+<body>
+    <table id="myTable">
+        <thead>
+            <tr>
+                <td rowspan="2">Part1</td>
+                <td rowspan="2">Part2</td>
+                <td colspan="3">Part3</td>
+                <td rowspan="2">Part4</td>
+                <td rowspan="2">Part5</td>
+            </tr>
+            <tr>
+                <td>Part3-1</td>
+                <td>Part3-2</td>
+                <td>Part3-3</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>√</td>
+                <td class="wordText">A</td>
+                <td class="specialWordText">~</td>
+                <td class="numberText">1</td>
+                <td>保存</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>×</td>
+                <td class="wordText">B</td>
+                <td class="specialWordText">！</td>
+                <td class="numberText">2</td>
+                <td>保存</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>√</td>
+                <td class="wordText">C</td>
+                <td class="specialWordText">@</td>
+                <td class="numberText">3</td>
+                <td>保存</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>√</td>
+                <td class="wordText">D</td>
+                <td class="specialWordText">#</td>
+                <td class="numberText">4</td>
+                <td>保存</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>×</td>
+                <td class="wordText">E</td>
+                <td class="specialWordText">$</td>
+                <td class="numberText">5</td>
+                <td>保存</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>√</td>
+                <td class="wordText">F</td>
+                <td class="specialWordText">%</td>
+                <td class="numberText">6</td>
+                <td>保存</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>×</td>
+                <td class="wordText">G</td>
+                <td class="specialWordText">^</td>
+                <td class="numberText">7</td>
+                <td>保存</td>
+                <td>备注</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>√</td>
+                <td class="wordText">H</td>
+                <td class="specialWordText">&</td>
+                <td class="numberText">8</td>
+                <td>保存</td>
+                <td>备注</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="rightKeyPart" class="rightKeyPart">
+        <div class="rightKeyBase">
+            <ul class="rightKeyMenu"></ul>
+            <div class="rightKeyCenter"><span>close</span></div>
+        </div>
+    </div>
+
+    <script src="rightKey.js"></script>
+    <script>
+        var rightKey = new RightKey("rightKeyPart");
+        rightKey.range = [
+            { selector: '#myTable .wordText', getData: function(ele) {
+                return  [
+                    { text: ele.parentNode.children[0].innerText, isEnabled: true },
+                    { text: "勾选", isEnabled: ((ele.parentNode.children[1].innerText.trim() == "√")? true: false ) },
+                    { text: ele.innerText, isEnabled: true },
+                    { text: "其他", isEnabled: true },
+                    { text: "删除", isEnabled: true },
+                    { text: "修改", isEnabled: true },
+                    { text: "备注", isEnabled: true }
+                ];
+            } },
+            { selector: '#myTable .specialWordText', getData: function(ele) {
+                return [
+                    { text: ele.parentNode.children[0].innerText, isEnabled: true },
+                    { text: "勾选", isEnabled: ((ele.parentNode.children[1].innerText.trim() == "√")? true: false ) },
+                    { text: ele.innerText, isEnabled: true },
+                    { text: "其他", isEnabled: true },
+                    { text: "删除", isEnabled: true },
+                    { text: "修改", isEnabled: true }
+                ];
+            } },
+            { selector: '#myTable .numberText', getData: function(ele) {
+                return [
+                    { text: ele.parentNode.children[0].innerText, isEnabled: true },
+                    { text: "勾选", isEnabled: ((ele.parentNode.children[1].innerText.trim() == "√")? true: false ) },
+                    { text: ele.innerText, isEnabled: true },
+                    { text: "删除", isEnabled: true },
+                    { text: "修改", isEnabled: true }
+                ];
+            } }
+        ];
+        rightKey.init();
+    </script>
+</body>
+</html>
